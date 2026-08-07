@@ -281,25 +281,25 @@ document.addEventListener('DOMContentLoaded', () => {
     { src: 'Andalisia/vip3.jpg', title: 'Andalucia Luxury Welcome Desk', category: 'andalucia', span: '' },
 
     // Cordoba & Granada Dining
-    { src: 'Cordoba & Granada/dinning1.jpg', title: 'Cordoba & Granada Grand Dining Pavilion', category: 'cordoba', span: 'span-wide' },
-    { src: 'Cordoba & Granada/dinning14.jpg', title: 'Granada Luxury Dining Arrangement', category: 'cordoba', span: 'span-tall' },
-    { src: 'Cordoba & Granada/dinning15.jpg', title: 'Cordoba Banquet Tables & Linens', category: 'cordoba', span: '' },
-    { src: 'Cordoba & Granada/dinning16.jpg', title: 'Cordoba & Granada Full Hall Capacity', category: 'cordoba', span: 'span-wide' },
-    { src: 'Cordoba & Granada/dinning9.jpg', title: 'Curated Dining Table Setting', category: 'cordoba', span: '' },
-    { src: 'Cordoba & Granada/dinning11.jpg', title: 'Bespoke Feast Setup', category: 'cordoba', span: '' },
+    { src: 'Cordoba-Granada/dinning1.jpg', title: 'Cordoba & Granada Grand Dining Pavilion', category: 'cordoba', span: 'span-wide' },
+    { src: 'Cordoba-Granada/dinning14.jpg', title: 'Granada Luxury Dining Arrangement', category: 'cordoba', span: 'span-tall' },
+    { src: 'Cordoba-Granada/dinning15.jpg', title: 'Cordoba Banquet Tables & Linens', category: 'cordoba', span: '' },
+    { src: 'Cordoba-Granada/dinning16.jpg', title: 'Cordoba & Granada Full Hall Capacity', category: 'cordoba', span: 'span-wide' },
+    { src: 'Cordoba-Granada/dinning9.jpg', title: 'Curated Dining Table Setting', category: 'cordoba', span: '' },
+    { src: 'Cordoba-Granada/dinning11.jpg', title: 'Bespoke Feast Setup', category: 'cordoba', span: '' },
 
     // Educational Events & Convocations
-    { src: 'Raihan Online Madrasa EDUCATIONAL EVENT/0F1A0437.jpg', title: 'Raihan Online Madrasa Convocation', category: 'educational', span: 'span-wide' },
-    { src: 'Raihan Online Madrasa EDUCATIONAL EVENT/0F1A0394.jpg', title: 'Grand Educational Assembly', category: 'educational', span: 'span-tall' },
-    { src: 'Spark connect EDUCATIONAL EVENT/087A9373.JPG', title: 'Spark Connect Academic Conference', category: 'educational', span: 'span-wide' },
-    { src: 'Raihan Online Madrasa EDUCATIONAL EVENT/duff.jpg', title: 'Raihan Online Madrasa Cultural Performance', category: 'educational', span: 'span-tall' },
-    { src: 'Spark connect EDUCATIONAL EVENT/087A9387.JPG', title: 'Academic Symposium & Address', category: 'educational', span: '' },
+    { src: 'Raihan-Madrasa-Event/0F1A0437.jpg', title: 'Raihan Online Madrasa Convocation', category: 'educational', span: 'span-wide' },
+    { src: 'Raihan-Madrasa-Event/0F1A0394.jpg', title: 'Grand Educational Assembly', category: 'educational', span: 'span-tall' },
+    { src: 'Spark-Connect-Event/087A9373.jpg', title: 'Spark Connect Academic Conference', category: 'educational', span: 'span-wide' },
+    { src: 'Raihan-Madrasa-Event/duff.jpg', title: 'Raihan Online Madrasa Cultural Performance', category: 'educational', span: 'span-tall' },
+    { src: 'Spark-Connect-Event/087A9387.jpg', title: 'Academic Symposium & Address', category: 'educational', span: '' },
 
     // Corporate & Conference Events
-    { src: 'Build X CORPORATE EVENT/0T5A0852.JPG', title: 'Build X Corporate Summit', category: 'exterior', span: 'span-wide' },
-    { src: 'Build X CORPORATE EVENT/0T5A0786.JPG', title: 'Executive Expo & Exhibition', category: 'exterior', span: '' },
-    { src: 'CONFERENCES/Faculty development programe 2026/0F1A1536.jpg', title: 'Faculty Development Program Conference 2026', category: 'educational', span: 'span-wide' },
-    { src: 'CONFERENCES/Faculty development programe 2026/0F1A1511.jpg', title: 'Faculty Conference Keynote Session', category: 'educational', span: '' }
+    { src: 'Build-X-Event/0T5A0852.JPG', title: 'Build X Corporate Summit', category: 'exterior', span: 'span-wide' },
+    { src: 'Build-X-Event/0T5A0786.JPG', title: 'Executive Expo & Exhibition', category: 'exterior', span: '' },
+    { src: 'CONFERENCES/Faculty-Development-2026/0F1A1536.jpg', title: 'Faculty Development Program Conference 2026', category: 'educational', span: 'span-wide' },
+    { src: 'CONFERENCES/Faculty-Development-2026/0F1A1511.jpg', title: 'Faculty Conference Keynote Session', category: 'educational', span: '' }
   ];
 
   let currentImageIndex = 0;
@@ -699,114 +699,114 @@ document.addEventListener('DOMContentLoaded', () => {
       title: "Ayadi Convocation Ceremony",
       tag: "CONVOCATION ALBUM",
       photos: [
-        "Ayadi Convocation EDUCATIONAL EVENT/0F1A3112.jpg",
-        "Ayadi Convocation EDUCATIONAL EVENT/0F1A3113.jpg",
-        "Ayadi Convocation EDUCATIONAL EVENT/0F1A3125.jpg",
-        "Ayadi Convocation EDUCATIONAL EVENT/0F1A3140.jpg",
-        "Ayadi Convocation EDUCATIONAL EVENT/0F1A3205.jpg",
-        "Ayadi Convocation EDUCATIONAL EVENT/0F1A3354.jpg",
-        "Ayadi Convocation EDUCATIONAL EVENT/0F1A4204.jpg",
-        "Ayadi Convocation EDUCATIONAL EVENT/0F1A4228.jpg",
-        "Ayadi Convocation EDUCATIONAL EVENT/0F1A4254.jpg",
-        "Ayadi Convocation EDUCATIONAL EVENT/0F1A4258.jpg",
-        "Ayadi Convocation EDUCATIONAL EVENT/0F1A4277.jpg",
-        "Ayadi Convocation EDUCATIONAL EVENT/0F1A4295.jpg",
-        "Ayadi Convocation EDUCATIONAL EVENT/0F1A4329.jpg"
+        "Ayadi-Convocation-Event/0F1A3112.jpg",
+        "Ayadi-Convocation-Event/0F1A3113.jpg",
+        "Ayadi-Convocation-Event/0F1A3125.jpg",
+        "Ayadi-Convocation-Event/0F1A3140.jpg",
+        "Ayadi-Convocation-Event/0F1A3205.jpg",
+        "Ayadi-Convocation-Event/0F1A3354.jpg",
+        "Ayadi-Convocation-Event/0F1A4204.jpg",
+        "Ayadi-Convocation-Event/0F1A4228.jpg",
+        "Ayadi-Convocation-Event/0F1A4254.jpg",
+        "Ayadi-Convocation-Event/0F1A4258.jpg",
+        "Ayadi-Convocation-Event/0F1A4277.jpg",
+        "Ayadi-Convocation-Event/0F1A4295.jpg",
+        "Ayadi-Convocation-Event/0F1A4329.jpg"
       ]
     },
     hr: {
       title: "Human Resources (HR) Training Program",
       tag: "CORPORATE CONFERENCE ALBUM",
       photos: [
-        "CONFERENCES/Human Resources(HR) Training/0T5A9627.jpg",
-        "CONFERENCES/Human Resources(HR) Training/0T5A9635.jpg",
-        "CONFERENCES/Human Resources(HR) Training/0T5A9650.jpg",
-        "CONFERENCES/Human Resources(HR) Training/0T5A9724.jpg",
-        "CONFERENCES/Human Resources(HR) Training/0T5A9730.jpg",
-        "CONFERENCES/Human Resources(HR) Training/0T5A9802.jpg",
-        "CONFERENCES/Human Resources(HR) Training/0T5A9822.jpg",
-        "CONFERENCES/Human Resources(HR) Training/0T5A9844.jpg"
+        "CONFERENCES/HR-Training/0T5A9627.jpg",
+        "CONFERENCES/HR-Training/0T5A9635.jpg",
+        "CONFERENCES/HR-Training/0T5A9650.jpg",
+        "CONFERENCES/HR-Training/0T5A9724.jpg",
+        "CONFERENCES/HR-Training/0T5A9730.jpg",
+        "CONFERENCES/HR-Training/0T5A9802.jpg",
+        "CONFERENCES/HR-Training/0T5A9822.jpg",
+        "CONFERENCES/HR-Training/0T5A9844.jpg"
       ]
     },
     raihan: {
       title: "Raihan Online Madrasa Cultural Fest",
       tag: "CULTURAL ALBUM",
       photos: [
-        "Raihan Online Madrasa EDUCATIONAL EVENT/duff.jpg",
-        "Raihan Online Madrasa EDUCATIONAL EVENT/0F1A0394.jpg",
-        "Raihan Online Madrasa EDUCATIONAL EVENT/0F1A0437.jpg",
-        "Raihan Online Madrasa EDUCATIONAL EVENT/0F1A0479.jpg",
-        "Raihan Online Madrasa EDUCATIONAL EVENT/0F1A0482.jpg",
-        "Raihan Online Madrasa EDUCATIONAL EVENT/0F1A0517.jpg",
-        "Raihan Online Madrasa EDUCATIONAL EVENT/0F1A0542.jpg",
-        "Raihan Online Madrasa EDUCATIONAL EVENT/0F1A0545.jpg",
-        "Raihan Online Madrasa EDUCATIONAL EVENT/0F1A0579.jpg"
+        "Raihan-Madrasa-Event/duff.jpg",
+        "Raihan-Madrasa-Event/0F1A0394.jpg",
+        "Raihan-Madrasa-Event/0F1A0437.jpg",
+        "Raihan-Madrasa-Event/0F1A0479.jpg",
+        "Raihan-Madrasa-Event/0F1A0482.jpg",
+        "Raihan-Madrasa-Event/0F1A0517.jpg",
+        "Raihan-Madrasa-Event/0F1A0542.jpg",
+        "Raihan-Madrasa-Event/0F1A0545.jpg",
+        "Raihan-Madrasa-Event/0F1A0579.jpg"
       ]
     },
     buildx: {
       title: "Build X Corporate Expo & Summit",
       tag: "CORPORATE ALBUM",
       photos: [
-        "Build X CORPORATE EVENT/0T5A0852.JPG",
-        "Build X CORPORATE EVENT/0T5A0786.JPG",
-        "Build X CORPORATE EVENT/0T5A0792 (1).JPG",
-        "Build X CORPORATE EVENT/0T5A0797.JPG"
+        "Build-X-Event/0T5A0852.JPG",
+        "Build-X-Event/0T5A0786.JPG",
+        "Build-X-Event/0T5A0792 (1).JPG",
+        "Build-X-Event/0T5A0797.JPG"
       ]
     },
     spark: {
       title: "Spark Connect Academic Summit",
       tag: "ACADEMIC ALBUM",
       photos: [
-        "Spark connect EDUCATIONAL EVENT/087A9373.jpg",
-        "Spark connect EDUCATIONAL EVENT/087A8464.jpg",
-        "Spark connect EDUCATIONAL EVENT/087A9381.jpg",
-        "Spark connect EDUCATIONAL EVENT/087A9387.jpg",
-        "Spark connect EDUCATIONAL EVENT/087A9390.jpg",
-        "Spark connect EDUCATIONAL EVENT/087A9395.jpg",
-        "Spark connect EDUCATIONAL EVENT/087A9398.jpg",
-        "Spark connect EDUCATIONAL EVENT/087A9400.jpg",
-        "Spark connect EDUCATIONAL EVENT/087A9405.jpg",
-        "Spark connect EDUCATIONAL EVENT/087A9411.jpg",
-        "Spark connect EDUCATIONAL EVENT/087A9413.jpg"
+        "Spark-Connect-Event/087A9373.jpg",
+        "Spark-Connect-Event/087A8464.jpg",
+        "Spark-Connect-Event/087A9381.jpg",
+        "Spark-Connect-Event/087A9387.jpg",
+        "Spark-Connect-Event/087A9390.jpg",
+        "Spark-Connect-Event/087A9395.jpg",
+        "Spark-Connect-Event/087A9398.jpg",
+        "Spark-Connect-Event/087A9400.jpg",
+        "Spark-Connect-Event/087A9405.jpg",
+        "Spark-Connect-Event/087A9411.jpg",
+        "Spark-Connect-Event/087A9413.jpg"
       ]
     },
     faculty: {
       title: "Faculty Development Program 2026",
       tag: "CONFERENCE ALBUM",
       photos: [
-        "CONFERENCES/Faculty development programe 2026/0F1A1536.jpg",
-        "CONFERENCES/Faculty development programe 2026/0F1A1511.jpg",
-        "CONFERENCES/Faculty development programe 2026/0F1A1556.jpg",
-        "CONFERENCES/Faculty development programe 2026/0F1A1558.jpg"
+        "CONFERENCES/Faculty-Development-2026/0F1A1536.jpg",
+        "CONFERENCES/Faculty-Development-2026/0F1A1511.jpg",
+        "CONFERENCES/Faculty-Development-2026/0F1A1556.jpg",
+        "CONFERENCES/Faculty-Development-2026/0F1A1558.jpg"
       ]
     },
     zeely: {
       title: "Zeely Convocation Ceremony",
       tag: "CONVOCATION ALBUM",
       photos: [
-        "Zeely Convocation EDUCATIONAL EVENT/0F1A4022.jpg",
-        "Zeely Convocation EDUCATIONAL EVENT/0F1A4159.jpg",
-        "Zeely Convocation EDUCATIONAL EVENT/0F1A4181.jpg",
-        "Zeely Convocation EDUCATIONAL EVENT/0F1A4236.jpg",
-        "Zeely Convocation EDUCATIONAL EVENT/0F1A4250.jpg",
-        "Zeely Convocation EDUCATIONAL EVENT/0F1A4401.jpg",
-        "Zeely Convocation EDUCATIONAL EVENT/0F1A4436.jpg",
-        "Zeely Convocation EDUCATIONAL EVENT/0F1A4447.jpg",
-        "Zeely Convocation EDUCATIONAL EVENT/0F1A4484.jpg",
-        "Zeely Convocation EDUCATIONAL EVENT/0F1A4496.jpg",
-        "Zeely Convocation EDUCATIONAL EVENT/0F1A4703.jpg"
+        "Zeely-Convocation-Event/0F1A4022.jpg",
+        "Zeely-Convocation-Event/0F1A4159.jpg",
+        "Zeely-Convocation-Event/0F1A4181.jpg",
+        "Zeely-Convocation-Event/0F1A4236.jpg",
+        "Zeely-Convocation-Event/0F1A4250.jpg",
+        "Zeely-Convocation-Event/0F1A4401.jpg",
+        "Zeely-Convocation-Event/0F1A4436.jpg",
+        "Zeely-Convocation-Event/0F1A4447.jpg",
+        "Zeely-Convocation-Event/0F1A4484.jpg",
+        "Zeely-Convocation-Event/0F1A4496.jpg",
+        "Zeely-Convocation-Event/0F1A4703.jpg"
       ]
     },
     cordoba: {
       title: "Cordoba & Granada Ballroom & Dining Pavilion",
       tag: "HALL 03 - PHOTO ALBUM",
       photos: [
-        "Cordoba & Granada/dinning16.jpg",
-        "Cordoba & Granada/dinning1.jpg",
-        "Cordoba & Granada/dinning14.jpg",
-        "Cordoba & Granada/dinning15.jpg",
-        "Cordoba & Granada/dinning9.jpg",
-        "Cordoba & Granada/dinning11.jpg"
+        "Cordoba-Granada/dinning16.jpg",
+        "Cordoba-Granada/dinning1.jpg",
+        "Cordoba-Granada/dinning14.jpg",
+        "Cordoba-Granada/dinning15.jpg",
+        "Cordoba-Granada/dinning9.jpg",
+        "Cordoba-Granada/dinning11.jpg"
       ]
     },
     alhambra: {
