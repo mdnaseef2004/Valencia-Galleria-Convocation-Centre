@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
   let lenis = null;
   if (typeof Lenis !== 'undefined') {
     lenis = new Lenis({
-      duration: 1.0,
+      duration: 1.2,
       easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
       smoothWheel: true,
       wheelMultiplier: 1.0,
@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded', () => {
       gsap.ticker.add((time) => {
         lenis.raf(time * 1000);
       });
-      gsap.ticker.lagSmoothing(500, 33);
+      gsap.ticker.lagSmoothing(0);
     } else {
       function raf(time) {
         lenis.raf(time);
@@ -158,16 +158,16 @@ document.addEventListener('DOMContentLoaded', () => {
     fadeUpEls.forEach((el) => {
       gsap.fromTo(
         el,
-        { opacity: 0, y: 50 },
+        { opacity: 0, y: 40 },
         {
           opacity: 1,
           y: 0,
-          duration: 1,
+          duration: 0.9,
           ease: 'power3.out',
           scrollTrigger: {
             trigger: el,
-            start: 'top 85%',
-            toggleActions: 'play none none reverse'
+            start: 'top 90%',
+            once: true
           }
         }
       );
@@ -289,17 +289,17 @@ document.addEventListener('DOMContentLoaded', () => {
     { src: 'Cordoba & Granada/dinning11.jpg', title: 'Bespoke Feast Setup', category: 'cordoba', span: '' },
 
     // Educational Events & Convocations
-    { src: 'Recent events/educational events/Raihan Online Madrasa/0F1A0437.jpg', title: 'Raihan Online Madrasa Convocation', category: 'educational', span: 'span-wide' },
-    { src: 'Recent events/educational events/Nawazin convocation/0F1A0394.jpg', title: 'Grand Educational Assembly', category: 'educational', span: 'span-tall' },
-    { src: 'Recent events/educational events/Spark connect/087A9373.JPG', title: 'Spark Connect Academic Conference', category: 'educational', span: 'span-wide' },
-    { src: 'Recent events/educational events/Raihan Online Madrasa/duff.jpg', title: 'Raihan Online Madrasa Cultural Performance', category: 'educational', span: 'span-tall' },
-    { src: 'Recent events/educational events/Spark connect/087A9387.JPG', title: 'Academic Symposium & Address', category: 'educational', span: '' },
+    { src: 'Raihan Online Madrasa EDUCATIONAL EVENT/0F1A0437.jpg', title: 'Raihan Online Madrasa Convocation', category: 'educational', span: 'span-wide' },
+    { src: 'Raihan Online Madrasa EDUCATIONAL EVENT/0F1A0394.jpg', title: 'Grand Educational Assembly', category: 'educational', span: 'span-tall' },
+    { src: 'Spark connect EDUCATIONAL EVENT/087A9373.JPG', title: 'Spark Connect Academic Conference', category: 'educational', span: 'span-wide' },
+    { src: 'Raihan Online Madrasa EDUCATIONAL EVENT/duff.jpg', title: 'Raihan Online Madrasa Cultural Performance', category: 'educational', span: 'span-tall' },
+    { src: 'Spark connect EDUCATIONAL EVENT/087A9387.JPG', title: 'Academic Symposium & Address', category: 'educational', span: '' },
 
     // Corporate & Conference Events
-    { src: 'Recent events/CORPORATE EVENTS/Build X/0T5A0852.JPG', title: 'Build X Corporate Summit', category: 'exterior', span: 'span-wide' },
-    { src: 'Recent events/CORPORATE EVENTS/Build X/0T5A0786.JPG', title: 'Executive Expo & Exhibition', category: 'exterior', span: '' },
-    { src: 'Recent events/CONFERENCES/Faculty development programe 2026/0F1A1536.jpg', title: 'Faculty Development Program Conference 2026', category: 'educational', span: 'span-wide' },
-    { src: 'Recent events/CONFERENCES/Faculty development programe 2026/0F1A1511.jpg', title: 'Faculty Conference Keynote Session', category: 'educational', span: '' }
+    { src: 'Build X CORPORATE EVENT/0T5A0852.JPG', title: 'Build X Corporate Summit', category: 'exterior', span: 'span-wide' },
+    { src: 'Build X CORPORATE EVENT/0T5A0786.JPG', title: 'Executive Expo & Exhibition', category: 'exterior', span: '' },
+    { src: 'CONFERENCES/Faculty development programe 2026/0F1A1536.jpg', title: 'Faculty Development Program Conference 2026', category: 'educational', span: 'span-wide' },
+    { src: 'CONFERENCES/Faculty development programe 2026/0F1A1511.jpg', title: 'Faculty Conference Keynote Session', category: 'educational', span: '' }
   ];
 
   let currentImageIndex = 0;
@@ -509,26 +509,108 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // --------------------------------------------------------------------------
-  // EVENTS CAROUSEL SCROLL NAVIGATION
+  // EVENTS & RECENT EVENTS CAROUSEL NAVIGATION CONTROLS
   // --------------------------------------------------------------------------
   function initEventsCarousel() {
     const wrapper = document.querySelector('.events-carousel-wrapper');
     const prevBtn = document.getElementById('events-prev-btn');
     const nextBtn = document.getElementById('events-next-btn');
+    const pillPrev = document.getElementById('events-pill-prev');
+    const pillNext = document.getElementById('events-pill-next');
+    const counter = document.getElementById('events-counter');
 
     if (!wrapper) return;
 
-    if (prevBtn) {
-      prevBtn.addEventListener('click', () => {
-        wrapper.scrollBy({ left: -360, behavior: 'smooth' });
-      });
+    const cards = wrapper.querySelectorAll('.event-card');
+
+    function getStepWidth() {
+      if (window.innerWidth <= 768) {
+        return (wrapper.clientWidth / 2) + 6;
+      }
+      return 358;
     }
 
-    if (nextBtn) {
-      nextBtn.addEventListener('click', () => {
-        wrapper.scrollBy({ left: 360, behavior: 'smooth' });
-      });
+    function updateCounter() {
+      if (!counter || cards.length === 0) return;
+      const scrollLeft = wrapper.scrollLeft;
+      const stepWidth = getStepWidth();
+      const index = Math.round(scrollLeft / stepWidth) + 1;
+      const clampedIndex = Math.min(Math.max(index, 1), cards.length);
+      counter.textContent = `${clampedIndex} / ${cards.length}`;
     }
+
+    function scrollNext() {
+      const stepWidth = getStepWidth();
+      if (wrapper.scrollLeft + wrapper.clientWidth >= wrapper.scrollWidth - 15) {
+        wrapper.scrollTo({ left: 0, behavior: 'smooth' });
+      } else {
+        wrapper.scrollBy({ left: stepWidth, behavior: 'smooth' });
+      }
+    }
+
+    function scrollPrev() {
+      const stepWidth = getStepWidth();
+      if (wrapper.scrollLeft <= 15) {
+        wrapper.scrollTo({ left: wrapper.scrollWidth, behavior: 'smooth' });
+      } else {
+        wrapper.scrollBy({ left: -stepWidth, behavior: 'smooth' });
+      }
+    }
+
+    if (prevBtn) prevBtn.addEventListener('click', scrollPrev);
+    if (nextBtn) nextBtn.addEventListener('click', scrollNext);
+    if (pillPrev) pillPrev.addEventListener('click', scrollPrev);
+    if (pillNext) pillNext.addEventListener('click', scrollNext);
+
+    wrapper.addEventListener('scroll', updateCounter, { passive: true });
+    window.addEventListener('resize', updateCounter, { passive: true });
+    updateCounter();
+  }
+
+  function initRecentEventsCarousel() {
+    const wrapper = document.querySelector('.recent-events-marquee-wrapper');
+    const prevBtn = document.getElementById('recent-prev-btn');
+    const nextBtn = document.getElementById('recent-next-btn');
+    const pillPrev = document.getElementById('recent-pill-prev');
+    const pillNext = document.getElementById('recent-pill-next');
+    const counter = document.getElementById('recent-counter');
+
+    if (!wrapper) return;
+
+    const cards = wrapper.querySelectorAll('.recent-event-card');
+    const stepWidth = 368;
+
+    function updateCounter() {
+      if (!counter || cards.length === 0) return;
+      const scrollLeft = wrapper.scrollLeft;
+      const index = Math.round(scrollLeft / stepWidth) + 1;
+      const clampedIndex = Math.min(Math.max(index, 1), cards.length);
+      counter.textContent = `${clampedIndex} / ${cards.length}`;
+    }
+
+    function scrollNext() {
+      if (wrapper.scrollLeft + wrapper.clientWidth >= wrapper.scrollWidth - 15) {
+        wrapper.scrollTo({ left: 0, behavior: 'smooth' });
+      } else {
+        wrapper.scrollBy({ left: stepWidth, behavior: 'smooth' });
+      }
+    }
+
+    function scrollPrev() {
+      if (wrapper.scrollLeft <= 15) {
+        wrapper.scrollTo({ left: wrapper.scrollWidth, behavior: 'smooth' });
+      } else {
+        wrapper.scrollBy({ left: -stepWidth, behavior: 'smooth' });
+      }
+    }
+
+    if (prevBtn) prevBtn.addEventListener('click', scrollPrev);
+    if (nextBtn) nextBtn.addEventListener('click', scrollNext);
+    if (pillPrev) pillPrev.addEventListener('click', scrollPrev);
+    if (pillNext) pillNext.addEventListener('click', scrollNext);
+
+    wrapper.addEventListener('scroll', updateCounter, { passive: true });
+    updateCounter();
   }
 
   // --------------------------------------------------------------------------
@@ -617,102 +699,102 @@ document.addEventListener('DOMContentLoaded', () => {
       title: "Ayadi Convocation Ceremony",
       tag: "CONVOCATION ALBUM",
       photos: [
-        "Recent events/educational events/Ayadi Convocation/0F1A3112.jpg",
-        "Recent events/educational events/Ayadi Convocation/0F1A3113.jpg",
-        "Recent events/educational events/Ayadi Convocation/0F1A3125.jpg",
-        "Recent events/educational events/Ayadi Convocation/0F1A3140.jpg",
-        "Recent events/educational events/Ayadi Convocation/0F1A3205.jpg",
-        "Recent events/educational events/Ayadi Convocation/0F1A3354.jpg",
-        "Recent events/educational events/Ayadi Convocation/0F1A4204.jpg",
-        "Recent events/educational events/Ayadi Convocation/0F1A4228.jpg",
-        "Recent events/educational events/Ayadi Convocation/0F1A4254.jpg",
-        "Recent events/educational events/Ayadi Convocation/0F1A4258.jpg",
-        "Recent events/educational events/Ayadi Convocation/0F1A4277.jpg",
-        "Recent events/educational events/Ayadi Convocation/0F1A4295.jpg",
-        "Recent events/educational events/Ayadi Convocation/0F1A4329.jpg"
+        "Ayadi Convocation EDUCATIONAL EVENT/0F1A3112.jpg",
+        "Ayadi Convocation EDUCATIONAL EVENT/0F1A3113.jpg",
+        "Ayadi Convocation EDUCATIONAL EVENT/0F1A3125.jpg",
+        "Ayadi Convocation EDUCATIONAL EVENT/0F1A3140.jpg",
+        "Ayadi Convocation EDUCATIONAL EVENT/0F1A3205.jpg",
+        "Ayadi Convocation EDUCATIONAL EVENT/0F1A3354.jpg",
+        "Ayadi Convocation EDUCATIONAL EVENT/0F1A4204.jpg",
+        "Ayadi Convocation EDUCATIONAL EVENT/0F1A4228.jpg",
+        "Ayadi Convocation EDUCATIONAL EVENT/0F1A4254.jpg",
+        "Ayadi Convocation EDUCATIONAL EVENT/0F1A4258.jpg",
+        "Ayadi Convocation EDUCATIONAL EVENT/0F1A4277.jpg",
+        "Ayadi Convocation EDUCATIONAL EVENT/0F1A4295.jpg",
+        "Ayadi Convocation EDUCATIONAL EVENT/0F1A4329.jpg"
       ]
     },
     hr: {
       title: "Human Resources (HR) Training Program",
       tag: "CORPORATE CONFERENCE ALBUM",
       photos: [
-        "Recent events/CONFERENCES/Human Resources(HR) Training/0T5A9627.JPG",
-        "Recent events/CONFERENCES/Human Resources(HR) Training/0T5A9635.JPG",
-        "Recent events/CONFERENCES/Human Resources(HR) Training/0T5A9650.JPG",
-        "Recent events/CONFERENCES/Human Resources(HR) Training/0T5A9724.JPG",
-        "Recent events/CONFERENCES/Human Resources(HR) Training/0T5A9730.JPG",
-        "Recent events/CONFERENCES/Human Resources(HR) Training/0T5A9802.JPG",
-        "Recent events/CONFERENCES/Human Resources(HR) Training/0T5A9822.JPG",
-        "Recent events/CONFERENCES/Human Resources(HR) Training/0T5A9844.JPG"
+        "CONFERENCES/Human Resources(HR) Training/0T5A9627.JPG",
+        "CONFERENCES/Human Resources(HR) Training/0T5A9635.JPG",
+        "CONFERENCES/Human Resources(HR) Training/0T5A9650.JPG",
+        "CONFERENCES/Human Resources(HR) Training/0T5A9724.JPG",
+        "CONFERENCES/Human Resources(HR) Training/0T5A9730.JPG",
+        "CONFERENCES/Human Resources(HR) Training/0T5A9802.JPG",
+        "CONFERENCES/Human Resources(HR) Training/0T5A9822.JPG",
+        "CONFERENCES/Human Resources(HR) Training/0T5A9844.JPG"
       ]
     },
     raihan: {
       title: "Raihan Online Madrasa Cultural Fest",
       tag: "CULTURAL ALBUM",
       photos: [
-        "Recent events/educational events/Raihan Online Madrasa/duff.jpg",
-        "Recent events/educational events/Raihan Online Madrasa/0F1A0394.jpg",
-        "Recent events/educational events/Raihan Online Madrasa/0F1A0437.jpg",
-        "Recent events/educational events/Raihan Online Madrasa/0F1A0479.jpg",
-        "Recent events/educational events/Raihan Online Madrasa/0F1A0482.jpg",
-        "Recent events/educational events/Raihan Online Madrasa/0F1A0517.jpg",
-        "Recent events/educational events/Raihan Online Madrasa/0F1A0542.jpg",
-        "Recent events/educational events/Raihan Online Madrasa/0F1A0545.jpg",
-        "Recent events/educational events/Raihan Online Madrasa/0F1A0579.jpg"
+        "Raihan Online Madrasa EDUCATIONAL EVENT/duff.jpg",
+        "Raihan Online Madrasa EDUCATIONAL EVENT/0F1A0394.jpg",
+        "Raihan Online Madrasa EDUCATIONAL EVENT/0F1A0437.jpg",
+        "Raihan Online Madrasa EDUCATIONAL EVENT/0F1A0479.jpg",
+        "Raihan Online Madrasa EDUCATIONAL EVENT/0F1A0482.jpg",
+        "Raihan Online Madrasa EDUCATIONAL EVENT/0F1A0517.jpg",
+        "Raihan Online Madrasa EDUCATIONAL EVENT/0F1A0542.jpg",
+        "Raihan Online Madrasa EDUCATIONAL EVENT/0F1A0545.jpg",
+        "Raihan Online Madrasa EDUCATIONAL EVENT/0F1A0579.jpg"
       ]
     },
     buildx: {
       title: "Build X Corporate Expo & Summit",
       tag: "CORPORATE ALBUM",
       photos: [
-        "Recent events/CORPORATE EVENTS/Build X/0T5A0852.JPG",
-        "Recent events/CORPORATE EVENTS/Build X/0T5A0786.JPG",
-        "Recent events/CORPORATE EVENTS/Build X/0T5A0792 (1).JPG",
-        "Recent events/CORPORATE EVENTS/Build X/0T5A0797.JPG"
+        "Build X CORPORATE EVENT/0T5A0852.JPG",
+        "Build X CORPORATE EVENT/0T5A0786.JPG",
+        "Build X CORPORATE EVENT/0T5A0792 (1).JPG",
+        "Build X CORPORATE EVENT/0T5A0797.JPG"
       ]
     },
     spark: {
       title: "Spark Connect Academic Summit",
       tag: "ACADEMIC ALBUM",
       photos: [
-        "Recent events/educational events/Spark connect/087A9373.JPG",
-        "Recent events/educational events/Spark connect/087A8464.JPG",
-        "Recent events/educational events/Spark connect/087A9381.JPG",
-        "Recent events/educational events/Spark connect/087A9387.JPG",
-        "Recent events/educational events/Spark connect/087A9390.JPG",
-        "Recent events/educational events/Spark connect/087A9395.JPG",
-        "Recent events/educational events/Spark connect/087A9398.JPG",
-        "Recent events/educational events/Spark connect/087A9400.JPG",
-        "Recent events/educational events/Spark connect/087A9405.JPG",
-        "Recent events/educational events/Spark connect/087A9411.JPG",
-        "Recent events/educational events/Spark connect/087A9413.JPG"
+        "Spark connect EDUCATIONAL EVENT/087A9373.JPG",
+        "Spark connect EDUCATIONAL EVENT/087A8464.JPG",
+        "Spark connect EDUCATIONAL EVENT/087A9381.JPG",
+        "Spark connect EDUCATIONAL EVENT/087A9387.JPG",
+        "Spark connect EDUCATIONAL EVENT/087A9390.JPG",
+        "Spark connect EDUCATIONAL EVENT/087A9395.JPG",
+        "Spark connect EDUCATIONAL EVENT/087A9398.JPG",
+        "Spark connect EDUCATIONAL EVENT/087A9400.JPG",
+        "Spark connect EDUCATIONAL EVENT/087A9405.JPG",
+        "Spark connect EDUCATIONAL EVENT/087A9411.JPG",
+        "Spark connect EDUCATIONAL EVENT/087A9413.JPG"
       ]
     },
     faculty: {
       title: "Faculty Development Program 2026",
       tag: "CONFERENCE ALBUM",
       photos: [
-        "Recent events/CONFERENCES/Faculty development programe 2026/0F1A1536.jpg",
-        "Recent events/CONFERENCES/Faculty development programe 2026/0F1A1511.jpg",
-        "Recent events/CONFERENCES/Faculty development programe 2026/0F1A1556.jpg",
-        "Recent events/CONFERENCES/Faculty development programe 2026/0F1A1558.jpg"
+        "CONFERENCES/Faculty development programe 2026/0F1A1536.jpg",
+        "CONFERENCES/Faculty development programe 2026/0F1A1511.jpg",
+        "CONFERENCES/Faculty development programe 2026/0F1A1556.jpg",
+        "CONFERENCES/Faculty development programe 2026/0F1A1558.jpg"
       ]
     },
     zeely: {
       title: "Zeely Convocation Ceremony",
       tag: "CONVOCATION ALBUM",
       photos: [
-        "Recent events/educational events/Zeely Convocation/0F1A4022.jpg",
-        "Recent events/educational events/Zeely Convocation/0F1A4159.jpg",
-        "Recent events/educational events/Zeely Convocation/0F1A4181.jpg",
-        "Recent events/educational events/Zeely Convocation/0F1A4236.jpg",
-        "Recent events/educational events/Zeely Convocation/0F1A4250.jpg",
-        "Recent events/educational events/Zeely Convocation/0F1A4401.jpg",
-        "Recent events/educational events/Zeely Convocation/0F1A4436.jpg",
-        "Recent events/educational events/Zeely Convocation/0F1A4447.jpg",
-        "Recent events/educational events/Zeely Convocation/0F1A4484.jpg",
-        "Recent events/educational events/Zeely Convocation/0F1A4496.jpg",
-        "Recent events/educational events/Zeely Convocation/0F1A4703.jpg"
+        "Zeely Convocation EDUCATIONAL EVENT/0F1A4022.jpg",
+        "Zeely Convocation EDUCATIONAL EVENT/0F1A4159.jpg",
+        "Zeely Convocation EDUCATIONAL EVENT/0F1A4181.jpg",
+        "Zeely Convocation EDUCATIONAL EVENT/0F1A4236.jpg",
+        "Zeely Convocation EDUCATIONAL EVENT/0F1A4250.jpg",
+        "Zeely Convocation EDUCATIONAL EVENT/0F1A4401.jpg",
+        "Zeely Convocation EDUCATIONAL EVENT/0F1A4436.jpg",
+        "Zeely Convocation EDUCATIONAL EVENT/0F1A4447.jpg",
+        "Zeely Convocation EDUCATIONAL EVENT/0F1A4484.jpg",
+        "Zeely Convocation EDUCATIONAL EVENT/0F1A4496.jpg",
+        "Zeely Convocation EDUCATIONAL EVENT/0F1A4703.jpg"
       ]
     },
     cordoba: {
@@ -831,7 +913,7 @@ document.addEventListener('DOMContentLoaded', () => {
       renderModalPhoto();
     }
 
-    document.querySelectorAll('.recent-event-card').forEach((card) => {
+    document.querySelectorAll('.recent-event-card, .event-card').forEach((card) => {
       card.addEventListener('click', () => {
         const albumKey = card.getAttribute('data-album');
         if (albumKey) openAlbum(albumKey);
@@ -870,7 +952,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     document.addEventListener('keydown', (e) => {
-      if (!modal.classList.contains('active')) return;
+      if (!modal || !modal.classList.contains('active')) return;
       if (e.key === 'Escape') closeAlbum();
       if (e.key === 'ArrowLeft') prevPhoto();
       if (e.key === 'ArrowRight') nextPhoto();
@@ -986,10 +1068,22 @@ document.addEventListener('DOMContentLoaded', () => {
   // Run modules
   initGoldParticles();
   initGSAPAnimations();
+  initGalleryAndLightbox();
   initFirstImpressionSlideshow();
   initCordobaSlider();
   initEventsCarousel();
+  initRecentEventsCarousel();
   initEventAlbumModal();
   initTestimonials();
   initFormAndModals();
+
+  if (typeof ScrollTrigger !== 'undefined') {
+    ScrollTrigger.refresh();
+  }
+});
+
+window.addEventListener('load', () => {
+  if (typeof ScrollTrigger !== 'undefined') {
+    ScrollTrigger.refresh();
+  }
 });

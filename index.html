@@ -14,13 +14,6 @@
   
   <!-- Main Stylesheet -->
   <link rel="stylesheet" href="src/style.css" />
-
-  <!-- GSAP & ScrollTrigger CDN -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
-  
-  <!-- Lenis Smooth Scroll CDN -->
-  <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.9/dist/lenis.min.js"></script>
 </head>
 <body>
   <!-- Grain & Canvas Backgrounds -->
@@ -48,6 +41,15 @@
     </ul>
 
     <a href="#contact" class="btn-gold-primary">ENQUIRE NOW</a>
+
+    <div class="mobile-header-socials">
+      <a href="https://www.instagram.com/valenciagalleria?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" rel="noopener" class="mobile-social-icon-btn" aria-label="Instagram">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+      </a>
+      <a href="https://www.facebook.com/share/18eHj9WP9k/?mibextid=wwXIfr" target="_blank" rel="noopener" class="mobile-social-icon-btn" aria-label="Facebook">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+      </a>
+    </div>
 
     <button class="mobile-toggle" id="mobile-toggle" aria-label="Toggle Menu">
       <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg>
@@ -274,73 +276,89 @@
     </div>
   </section>
 
-  <!-- 7. EVENTS SECTION -->
-  <section class="section-padding">
-    <div class="halls-header gsap-fade-up">
-      <span class="sublabel-gold" style="justify-content: center;">VERSATILE EVENT DESTINATION</span>
-      <h2 class="halls-main-title">Celebrations of <span class="gold-accent-text">Every Kind</span></h2>
-      <p class="halls-subtitle">Explore the endless possibilities offered across our multi-hall convention center.</p>
-    </div>
+    <!-- 7. EVENTS SECTION -->
+    <section class="section-padding">
+      <div class="halls-header gsap-fade-up">
+        <span class="sublabel-gold" style="justify-content: center;">VERSATILE EVENT DESTINATION</span>
+        <h2 class="halls-main-title">Celebrations of <span class="gold-accent-text">Every Kind</span></h2>
+        <p class="halls-subtitle">Explore the endless possibilities offered across our multi-hall convention center.</p>
+      </div>
 
-    <!-- Carousel Container with Floating Left / Right Buttons -->
-    <div style="position: relative;" class="gsap-fade-up">
-      <button class="events-nav-btn events-nav-prev" id="events-prev-btn" aria-label="Previous Event">‹</button>
+      <!-- Interactive Carousel Container with Next/Prev Options -->
+      <div class="carousel-container gsap-fade-up">
+        <button class="slider-arrow slider-arrow-prev" id="events-prev-btn" aria-label="Previous Category">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg>
+        </button>
 
-      <div class="events-carousel-wrapper">
-        <div class="events-track">
-          <div class="event-card">
-            <img src="Alhambra/hall11.jpg" alt="Weddings" class="event-card-img" loading="lazy" decoding="async" />
-            <div class="event-card-overlay">
-              <span class="sublabel-gold" style="font-size: 0.65rem;">ROYAL OCCASIONS</span>
-              <h3 class="event-card-title">WEDDINGS</h3>
+        <div class="events-carousel-wrapper">
+          <div class="events-track">
+            <div class="event-card" data-album="alhambra" style="cursor: pointer;">
+              <img src="Alhambra/hall11.jpg" alt="Weddings" class="event-card-img" loading="lazy" decoding="async" />
+              <div class="event-card-overlay">
+                <span class="sublabel-gold" style="font-size: 0.65rem;">ROYAL OCCASIONS</span>
+                <h3 class="event-card-title">WEDDINGS</h3>
+              </div>
             </div>
-          </div>
 
-          <div class="event-card">
-            <img src="Cordoba & Granada/dinning1.jpg" alt="Receptions" class="event-card-img" loading="lazy" decoding="async" />
-            <div class="event-card-overlay">
-              <span class="sublabel-gold" style="font-size: 0.65rem;">GRAND DINING</span>
-              <h3 class="event-card-title">RECEPTIONS</h3>
+            <div class="event-card" data-album="cordoba" style="cursor: pointer;">
+              <img src="Cordoba & Granada/dinning1.jpg" alt="Receptions" class="event-card-img" loading="lazy" decoding="async" />
+              <div class="event-card-overlay">
+                <span class="sublabel-gold" style="font-size: 0.65rem;">GRAND DINING</span>
+                <h3 class="event-card-title">RECEPTIONS</h3>
+              </div>
             </div>
-          </div>
 
-          <div class="event-card">
-            <img src="Recent events/educational events/Raihan Online Madrasa/0F1A0437.jpg" alt="Educational Events" class="event-card-img" loading="lazy" decoding="async" />
-            <div class="event-card-overlay">
-              <span class="sublabel-gold" style="font-size: 0.65rem;">ACADEMIC & CONVOCATIONS</span>
-              <h3 class="event-card-title">EDUCATIONAL EVENTS</h3>
+            <div class="event-card" data-album="raihan" style="cursor: pointer;">
+              <img src="Raihan Online Madrasa EDUCATIONAL EVENT/0F1A0437.jpg" alt="Educational Events" class="event-card-img" loading="lazy" decoding="async" />
+              <div class="event-card-overlay">
+                <span class="sublabel-gold" style="font-size: 0.65rem;">ACADEMIC & CONVOCATIONS</span>
+                <h3 class="event-card-title">EDUCATIONAL EVENTS</h3>
+              </div>
             </div>
-          </div>
 
-          <div class="event-card">
-            <img src="Recent events/CORPORATE EVENTS/Build X/0T5A0852.JPG" alt="Corporate Events" class="event-card-img" loading="lazy" decoding="async" />
-            <div class="event-card-overlay">
-              <span class="sublabel-gold" style="font-size: 0.65rem;">EXECUTIVE SUMMITS</span>
-              <h3 class="event-card-title">CORPORATE EVENTS</h3>
+            <div class="event-card" data-album="buildx" style="cursor: pointer;">
+              <img src="Build X CORPORATE EVENT/0T5A0852.JPG" alt="Corporate Events" class="event-card-img" loading="lazy" decoding="async" />
+              <div class="event-card-overlay">
+                <span class="sublabel-gold" style="font-size: 0.65rem;">EXECUTIVE SUMMITS</span>
+                <h3 class="event-card-title">CORPORATE EVENTS</h3>
+              </div>
             </div>
-          </div>
 
-          <div class="event-card">
-            <img src="Recent events/CONFERENCES/Faculty development programe 2026/0F1A1536.jpg" alt="Conferences" class="event-card-img" loading="lazy" decoding="async" />
-            <div class="event-card-overlay">
-              <span class="sublabel-gold" style="font-size: 0.65rem;">FACULTY & ASSEMBLIES</span>
-              <h3 class="event-card-title">CONFERENCES</h3>
+            <div class="event-card" data-album="faculty" style="cursor: pointer;">
+              <img src="CONFERENCES/Faculty development programe 2026/0F1A1536.jpg" alt="Conferences" class="event-card-img" loading="lazy" decoding="async" />
+              <div class="event-card-overlay">
+                <span class="sublabel-gold" style="font-size: 0.65rem;">FACULTY & ASSEMBLIES</span>
+                <h3 class="event-card-title">CONFERENCES</h3>
+              </div>
             </div>
-          </div>
 
-          <div class="event-card">
-            <img src="Recent events/educational events/Raihan Online Madrasa/duff.jpg" alt="Cultural Programs" class="event-card-img" loading="lazy" decoding="async" />
-            <div class="event-card-overlay">
-              <span class="sublabel-gold" style="font-size: 0.65rem;">STAGE & PERFORMANCES</span>
-              <h3 class="event-card-title">CULTURAL PROGRAMS</h3>
+            <div class="event-card" data-album="raihan" style="cursor: pointer;">
+              <img src="Raihan Online Madrasa EDUCATIONAL EVENT/duff.jpg" alt="Cultural Programs" class="event-card-img" loading="lazy" decoding="async" />
+              <div class="event-card-overlay">
+                <span class="sublabel-gold" style="font-size: 0.65rem;">STAGE & PERFORMANCES</span>
+                <h3 class="event-card-title">CULTURAL PROGRAMS</h3>
+              </div>
             </div>
           </div>
         </div>
+
+        <button class="slider-arrow slider-arrow-next" id="events-next-btn" aria-label="Next Category">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
+        </button>
       </div>
 
-      <button class="events-nav-btn events-nav-next" id="events-next-btn" aria-label="Next Event">›</button>
-    </div>
-  </section>
+      <div class="slider-pagination-bar gsap-fade-up">
+        <button class="slider-nav-pill" id="events-pill-prev" aria-label="Previous Option">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m15 18-6-6 6-6"/></svg>
+          Previous
+        </button>
+        <span class="slider-counter-badge" id="events-counter">1 / 6</span>
+        <button class="slider-nav-pill" id="events-pill-next" aria-label="Next Option">
+          Next
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m9 18 6-6-6-6"/></svg>
+        </button>
+      </div>
+    </section>
 
   <!-- 8. SERVICES & AMENITIES -->
   <section id="services" class="section-padding">
@@ -385,7 +403,7 @@
     </div>
   </section>
 
-  <!-- RECENT EVENTS CONTINUOUS SCROLL SECTION -->
+  <!-- RECENT EVENTS CONTINUOUS AUTO-SCROLLING MARQUEE SECTION -->
   <section class="section-padding" style="overflow: hidden; padding-top: 60px;">
     <div class="halls-header gsap-fade-up">
       <span class="sublabel-gold" style="justify-content: center;">LIVE FROM VALENCIA GALLERIA</span>
@@ -398,7 +416,7 @@
       <div class="recent-events-marquee-track">
         <!-- FIRST SET OF CARDS -->
         <div class="recent-event-card" data-album="ayadi">
-          <img src="Recent events/educational events/Ayadi Convocation/0F1A3112.jpg" alt="Ayadi Convocation" class="recent-event-card-img" loading="lazy" decoding="async" />
+          <img src="Ayadi Convocation EDUCATIONAL EVENT/0F1A3112.jpg" alt="Ayadi Convocation" class="recent-event-card-img" loading="lazy" decoding="async" />
           <div class="recent-event-card-overlay">
             <span class="sublabel-gold" style="font-size: 0.65rem;">CONVOCATION CEREMONY</span>
             <h3 class="recent-event-card-title">Ayadi Convocation</h3>
@@ -406,7 +424,7 @@
         </div>
 
         <div class="recent-event-card" data-album="hr">
-          <img src="Recent events/CONFERENCES/Human Resources(HR) Training/0T5A9627.JPG" alt="Human Resources (HR) Training" class="recent-event-card-img" loading="lazy" decoding="async" />
+          <img src="CONFERENCES/Human Resources(HR) Training/0T5A9627.JPG" alt="Human Resources (HR) Training" class="recent-event-card-img" loading="lazy" decoding="async" />
           <div class="recent-event-card-overlay">
             <span class="sublabel-gold" style="font-size: 0.65rem;">HR & CORPORATE TRAINING</span>
             <h3 class="recent-event-card-title">HR Training Program</h3>
@@ -414,7 +432,7 @@
         </div>
 
         <div class="recent-event-card" data-album="raihan">
-          <img src="Recent events/educational events/Raihan Online Madrasa/duff.jpg" alt="Raihan Online Madrasa" class="recent-event-card-img" loading="lazy" decoding="async" />
+          <img src="Raihan Online Madrasa EDUCATIONAL EVENT/0F1A0437.jpg" alt="Raihan Online Madrasa" class="recent-event-card-img" loading="lazy" decoding="async" />
           <div class="recent-event-card-overlay">
             <span class="sublabel-gold" style="font-size: 0.65rem;">CULTURAL PERFORMANCE</span>
             <h3 class="recent-event-card-title">Raihan Online Madrasa Fest</h3>
@@ -422,7 +440,7 @@
         </div>
 
         <div class="recent-event-card" data-album="buildx">
-          <img src="Recent events/CORPORATE EVENTS/Build X/0T5A0852.JPG" alt="Build X Corporate Summit" class="recent-event-card-img" loading="lazy" decoding="async" />
+          <img src="Build X CORPORATE EVENT/0T5A0852.JPG" alt="Build X Corporate Summit" class="recent-event-card-img" loading="lazy" decoding="async" />
           <div class="recent-event-card-overlay">
             <span class="sublabel-gold" style="font-size: 0.65rem;">EXECUTIVE SUMMIT</span>
             <h3 class="recent-event-card-title">Build X Corporate Expo</h3>
@@ -430,7 +448,7 @@
         </div>
 
         <div class="recent-event-card" data-album="spark">
-          <img src="Recent events/educational events/Spark connect/087A9373.JPG" alt="Spark Connect" class="recent-event-card-img" loading="lazy" decoding="async" />
+          <img src="Spark connect EDUCATIONAL EVENT/087A9373.JPG" alt="Spark Connect" class="recent-event-card-img" loading="lazy" decoding="async" />
           <div class="recent-event-card-overlay">
             <span class="sublabel-gold" style="font-size: 0.65rem;">ACADEMIC CONFERENCE</span>
             <h3 class="recent-event-card-title">Spark Connect Summit</h3>
@@ -438,7 +456,7 @@
         </div>
 
         <div class="recent-event-card" data-album="faculty">
-          <img src="Recent events/CONFERENCES/Faculty development programe 2026/0F1A1536.jpg" alt="Faculty Development Program 2026" class="recent-event-card-img" loading="lazy" decoding="async" />
+          <img src="CONFERENCES/Faculty development programe 2026/0F1A1536.jpg" alt="Faculty Development Program 2026" class="recent-event-card-img" loading="lazy" decoding="async" />
           <div class="recent-event-card-overlay">
             <span class="sublabel-gold" style="font-size: 0.65rem;">FACULTY DEVELOPMENT</span>
             <h3 class="recent-event-card-title">Faculty Program 2026</h3>
@@ -446,7 +464,7 @@
         </div>
 
         <div class="recent-event-card" data-album="zeely">
-          <img src="Recent events/educational events/Zeely Convocation/0F1A4022.jpg" alt="Zeely Convocation" class="recent-event-card-img" loading="lazy" decoding="async" />
+          <img src="Zeely Convocation EDUCATIONAL EVENT/0F1A4022.jpg" alt="Zeely Convocation" class="recent-event-card-img" loading="lazy" decoding="async" />
           <div class="recent-event-card-overlay">
             <span class="sublabel-gold" style="font-size: 0.65rem;">ACADEMIC CEREMONY</span>
             <h3 class="recent-event-card-title">Zeely Convocation</h3>
@@ -455,7 +473,7 @@
 
         <!-- DUPLICATED SET FOR SEAMLESS 100% INFINITE SCROLLING -->
         <div class="recent-event-card" data-album="ayadi">
-          <img src="Recent events/educational events/Ayadi Convocation/0F1A3112.jpg" alt="Ayadi Convocation" class="recent-event-card-img" loading="lazy" decoding="async" />
+          <img src="Ayadi Convocation EDUCATIONAL EVENT/0F1A3112.jpg" alt="Ayadi Convocation" class="recent-event-card-img" loading="lazy" decoding="async" />
           <div class="recent-event-card-overlay">
             <span class="sublabel-gold" style="font-size: 0.65rem;">CONVOCATION CEREMONY</span>
             <h3 class="recent-event-card-title">Ayadi Convocation</h3>
@@ -463,7 +481,7 @@
         </div>
 
         <div class="recent-event-card" data-album="hr">
-          <img src="Recent events/CONFERENCES/Human Resources(HR) Training/0T5A9627.JPG" alt="Human Resources (HR) Training" class="recent-event-card-img" loading="lazy" decoding="async" />
+          <img src="CONFERENCES/Human Resources(HR) Training/0T5A9627.JPG" alt="Human Resources (HR) Training" class="recent-event-card-img" loading="lazy" decoding="async" />
           <div class="recent-event-card-overlay">
             <span class="sublabel-gold" style="font-size: 0.65rem;">HR & CORPORATE TRAINING</span>
             <h3 class="recent-event-card-title">HR Training Program</h3>
@@ -471,7 +489,7 @@
         </div>
 
         <div class="recent-event-card" data-album="raihan">
-          <img src="Recent events/educational events/Raihan Online Madrasa/duff.jpg" alt="Raihan Online Madrasa" class="recent-event-card-img" loading="lazy" decoding="async" />
+          <img src="Raihan Online Madrasa EDUCATIONAL EVENT/0F1A0437.jpg" alt="Raihan Online Madrasa" class="recent-event-card-img" loading="lazy" decoding="async" />
           <div class="recent-event-card-overlay">
             <span class="sublabel-gold" style="font-size: 0.65rem;">CULTURAL PERFORMANCE</span>
             <h3 class="recent-event-card-title">Raihan Online Madrasa Fest</h3>
@@ -479,7 +497,7 @@
         </div>
 
         <div class="recent-event-card" data-album="buildx">
-          <img src="Recent events/CORPORATE EVENTS/Build X/0T5A0852.JPG" alt="Build X Corporate Summit" class="recent-event-card-img" loading="lazy" decoding="async" />
+          <img src="Build X CORPORATE EVENT/0T5A0852.JPG" alt="Build X Corporate Summit" class="recent-event-card-img" loading="lazy" decoding="async" />
           <div class="recent-event-card-overlay">
             <span class="sublabel-gold" style="font-size: 0.65rem;">EXECUTIVE SUMMITS</span>
             <h3 class="recent-event-card-title">Build X Corporate Expo</h3>
@@ -487,7 +505,7 @@
         </div>
 
         <div class="recent-event-card" data-album="spark">
-          <img src="Recent events/educational events/Spark connect/087A9373.JPG" alt="Spark Connect" class="recent-event-card-img" loading="lazy" decoding="async" />
+          <img src="Spark connect EDUCATIONAL EVENT/087A9373.JPG" alt="Spark Connect" class="recent-event-card-img" loading="lazy" decoding="async" />
           <div class="recent-event-card-overlay">
             <span class="sublabel-gold" style="font-size: 0.65rem;">ACADEMIC CONFERENCE</span>
             <h3 class="recent-event-card-title">Spark Connect Summit</h3>
@@ -495,7 +513,7 @@
         </div>
 
         <div class="recent-event-card" data-album="faculty">
-          <img src="Recent events/CONFERENCES/Faculty development programe 2026/0F1A1536.jpg" alt="Faculty Development Program 2026" class="recent-event-card-img" loading="lazy" decoding="async" />
+          <img src="CONFERENCES/Faculty development programe 2026/0F1A1536.jpg" alt="Faculty Development Program 2026" class="recent-event-card-img" loading="lazy" decoding="async" />
           <div class="recent-event-card-overlay">
             <span class="sublabel-gold" style="font-size: 0.65rem;">FACULTY DEVELOPMENT</span>
             <h3 class="recent-event-card-title">Faculty Program 2026</h3>
@@ -503,7 +521,7 @@
         </div>
 
         <div class="recent-event-card" data-album="zeely">
-          <img src="Recent events/educational events/Zeely Convocation/0F1A4022.jpg" alt="Zeely Convocation" class="recent-event-card-img" loading="lazy" decoding="async" />
+          <img src="Zeely Convocation EDUCATIONAL EVENT/0F1A4022.jpg" alt="Zeely Convocation" class="recent-event-card-img" loading="lazy" decoding="async" />
           <div class="recent-event-card-overlay">
             <span class="sublabel-gold" style="font-size: 0.65rem;">ACADEMIC CEREMONY</span>
             <h3 class="recent-event-card-title">Zeely Convocation</h3>
@@ -805,6 +823,14 @@
   <!-- FLOATING WHATSAPP BUTTON -->
   <a href="https://wa.me/917510103055" target="_blank" rel="noopener" class="floating-whatsapp-btn" aria-label="Chat on WhatsApp">
     <svg width="30" height="30" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.5 15.3L2 22l4.8-1.5A10 10 0 1 0 12 2zm0 18a8 8 0 0 1-4.2-1.2l-.3-.2-3.1 1 1-3-.2-.3A8 8 0 1 1 12 20zm4.5-6c-.2-.1-1.4-.7-1.7-.8-.2-.1-.4-.1-.5.1s-.6.8-.8.9-.3.2-.5.1a6.8 6.8 0 0 1-2.1-1.3 7.6 7.6 0 0 1-1.5-1.8c-.1-.2 0-.4.1-.5.1-.1.2-.3.3-.4.1-.1.2-.3.2-.4s0-.3 0-.4l-.7-1.6c-.2-.4-.4-.4-.5-.4h-.5c-.2 0-.4.1-.6.3s-.8.8-.8 2c0 1.1.8 2.2 1 2.4s1.7 2.6 4.1 3.6c.6.2 1 .4 1.4.5.6.2 1.2.2 1.6.1.5-.1 1.4-.6 1.6-1.1s.2-1 .1-1.1c-.1-.1-.3-.2-.5-.3z"/></svg>
+  </a>
+
+  <!-- MOBILE ONLY FLOATING ENQUIRE BUTTON -->
+  <a href="#contact" class="mobile-only-floating-enquire-btn" aria-label="Enquire Now">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+    </svg>
+    <span>ENQUIRE NOW</span>
   </a>
 
   <!-- GSAP & Lenis Smooth Scroll Libraries -->
