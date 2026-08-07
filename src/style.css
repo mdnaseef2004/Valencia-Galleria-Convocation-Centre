@@ -899,6 +899,21 @@ h1, h2, h3, h4, .font-serif {
   transition: transform 0.1s ease-out;
 }
 
+/* Andalucia Photography Showcase Strip */
+.andalucia-photo-strip {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+  margin-top: 40px;
+}
+
+.andalucia-photo-item {
+  height: 240px;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  border: 1px solid var(--border-gold-subtle);
+}
+
 /* Cordoba & Granada Slider */
 .cordoba-slider {
   position: absolute;
@@ -2019,7 +2034,7 @@ html, body {
 /* Smartphone & Mobile Viewports (max-width: 768px) */
 @media (max-width: 768px) {
   .navbar {
-    padding: 10px 14px;
+    padding: 6px 14px !important;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -2027,15 +2042,15 @@ html, body {
   }
 
   .brand-logo img {
-    height: 34px !important;
+    height: 30px !important;
   }
 
   .brand-name-top {
-    font-size: 1.0rem;
+    font-size: 0.95rem;
   }
 
   .brand-name-bottom {
-    font-size: 0.45rem;
+    font-size: 0.42rem;
   }
 
   /* Hide top header enquire buttons in mobile view */
@@ -2054,8 +2069,8 @@ html, body {
   }
 
   .mobile-social-icon-btn {
-    width: 35px;
-    height: 35px;
+    width: 32px;
+    height: 32px;
     border-radius: 50%;
     background: rgba(212, 175, 55, 0.12);
     border: 1px solid var(--border-gold-bright);
@@ -2085,32 +2100,36 @@ html, body {
     height: 24px;
   }
 
-  /* Hero Section Mobile */
+  /* Hero Section Mobile - Content Starts Right Below Navbar */
   .hero-section {
-    min-height: 52vh !important;
-    padding-top: 95px;
-    padding-bottom: 36px;
+    min-height: auto !important;
+    height: auto !important;
+    padding-top: 52px !important;
+    padding-bottom: 20px !important;
+    justify-content: flex-start !important;
   }
 
   .hero-content {
-    padding: 0 14px;
-    text-align: center;
+    padding: 0 10px !important;
+    margin-top: 0 !important;
+    text-align: center !important;
   }
 
   .hero-title {
     font-size: clamp(1.8rem, 7vw, 2.8rem);
     line-height: 1.15;
+    margin-top: 0 !important;
   }
 
   .hero-subtitle {
     font-size: 0.68rem;
     letter-spacing: 0.18em;
-    margin-bottom: 10px;
+    margin-bottom: 6px;
   }
 
   .hero-description {
     font-size: 0.9rem;
-    margin-bottom: 20px;
+    margin-bottom: 14px;
   }
 
   .hero-ctas {
@@ -2118,7 +2137,7 @@ html, body {
     width: 100%;
     max-width: 300px;
     margin: 0 auto;
-    gap: 10px;
+    gap: 8px;
   }
 
   .hero-ctas .btn-gold-primary,
@@ -2127,7 +2146,7 @@ html, body {
     width: 100%;
     justify-content: center;
     text-align: center;
-    padding: 12px 18px;
+    padding: 10px 16px;
     font-size: 0.78rem;
   }
 
@@ -2139,11 +2158,11 @@ html, body {
   }
 
   .section-padding {
-    padding: 40px 14px;
+    padding: 16px 14px !important;
   }
 
   .halls-header {
-    margin-bottom: 24px;
+    margin-bottom: 12px !important;
   }
 
   .halls-subtitle {
@@ -2223,6 +2242,20 @@ html, body {
     width: 100% !important;
   }
 
+  /* Andalucia Hall - Show Only 1 Photo in Mobile View */
+  .hall-02-grid .hall-horizontal-container {
+    display: none !important;
+  }
+
+  .andalucia-photo-strip {
+    grid-template-columns: 1fr !important;
+    margin-top: 16px !important;
+  }
+
+  .andalucia-photo-item.mobile-hide-photo {
+    display: none !important;
+  }
+
   .hall-img-container,
   .hall-horizontal-container {
     height: 230px !important;
@@ -2247,17 +2280,36 @@ html, body {
     border-radius: var(--radius-sm);
   }
 
+  /* Center Text & Content Elements in Mobile View */
   .hall-details {
-    gap: 10px !important;
+    gap: 12px !important;
+    text-align: center !important;
+    align-items: center !important;
+    justify-content: center !important;
   }
 
-  .hall-name {
-    font-size: clamp(1.8rem, 6vw, 2.6rem) !important;
+  .hall-tag,
+  .hall-name,
+  .hall-details p {
+    text-align: center !important;
+  }
+
+  .hall-specs {
+    justify-content: center !important;
+  }
+
+  .infra-item,
+  .service-card,
+  .enquiry-info,
+  .location-detail-item {
+    text-align: center !important;
+    align-items: center !important;
   }
 
   .hall-03-block {
     min-height: 320px !important;
     padding: 24px 16px;
+    text-align: center !important;
   }
 
   .infra-image-wrapper {

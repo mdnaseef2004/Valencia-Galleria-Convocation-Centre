@@ -718,14 +718,14 @@ document.addEventListener('DOMContentLoaded', () => {
       title: "Human Resources (HR) Training Program",
       tag: "CORPORATE CONFERENCE ALBUM",
       photos: [
-        "CONFERENCES/Human Resources(HR) Training/0T5A9627.JPG",
-        "CONFERENCES/Human Resources(HR) Training/0T5A9635.JPG",
-        "CONFERENCES/Human Resources(HR) Training/0T5A9650.JPG",
-        "CONFERENCES/Human Resources(HR) Training/0T5A9724.JPG",
-        "CONFERENCES/Human Resources(HR) Training/0T5A9730.JPG",
-        "CONFERENCES/Human Resources(HR) Training/0T5A9802.JPG",
-        "CONFERENCES/Human Resources(HR) Training/0T5A9822.JPG",
-        "CONFERENCES/Human Resources(HR) Training/0T5A9844.JPG"
+        "CONFERENCES/Human Resources(HR) Training/0T5A9627.jpg",
+        "CONFERENCES/Human Resources(HR) Training/0T5A9635.jpg",
+        "CONFERENCES/Human Resources(HR) Training/0T5A9650.jpg",
+        "CONFERENCES/Human Resources(HR) Training/0T5A9724.jpg",
+        "CONFERENCES/Human Resources(HR) Training/0T5A9730.jpg",
+        "CONFERENCES/Human Resources(HR) Training/0T5A9802.jpg",
+        "CONFERENCES/Human Resources(HR) Training/0T5A9822.jpg",
+        "CONFERENCES/Human Resources(HR) Training/0T5A9844.jpg"
       ]
     },
     raihan: {
@@ -757,17 +757,17 @@ document.addEventListener('DOMContentLoaded', () => {
       title: "Spark Connect Academic Summit",
       tag: "ACADEMIC ALBUM",
       photos: [
-        "Spark connect EDUCATIONAL EVENT/087A9373.JPG",
-        "Spark connect EDUCATIONAL EVENT/087A8464.JPG",
-        "Spark connect EDUCATIONAL EVENT/087A9381.JPG",
-        "Spark connect EDUCATIONAL EVENT/087A9387.JPG",
-        "Spark connect EDUCATIONAL EVENT/087A9390.JPG",
-        "Spark connect EDUCATIONAL EVENT/087A9395.JPG",
-        "Spark connect EDUCATIONAL EVENT/087A9398.JPG",
-        "Spark connect EDUCATIONAL EVENT/087A9400.JPG",
-        "Spark connect EDUCATIONAL EVENT/087A9405.JPG",
-        "Spark connect EDUCATIONAL EVENT/087A9411.JPG",
-        "Spark connect EDUCATIONAL EVENT/087A9413.JPG"
+        "Spark connect EDUCATIONAL EVENT/087A9373.jpg",
+        "Spark connect EDUCATIONAL EVENT/087A8464.jpg",
+        "Spark connect EDUCATIONAL EVENT/087A9381.jpg",
+        "Spark connect EDUCATIONAL EVENT/087A9387.jpg",
+        "Spark connect EDUCATIONAL EVENT/087A9390.jpg",
+        "Spark connect EDUCATIONAL EVENT/087A9395.jpg",
+        "Spark connect EDUCATIONAL EVENT/087A9398.jpg",
+        "Spark connect EDUCATIONAL EVENT/087A9400.jpg",
+        "Spark connect EDUCATIONAL EVENT/087A9405.jpg",
+        "Spark connect EDUCATIONAL EVENT/087A9411.jpg",
+        "Spark connect EDUCATIONAL EVENT/087A9413.jpg"
       ]
     },
     faculty: {
