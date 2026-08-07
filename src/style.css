@@ -2100,19 +2100,23 @@ html, body {
     height: 24px;
   }
 
-  /* Hero Section Mobile - Content Starts Right Below Navbar */
+  /* Hero Section Mobile - Brought Down Cleanly */
   .hero-section {
-    min-height: auto !important;
+    min-height: 75vh !important;
     height: auto !important;
-    padding-top: 52px !important;
-    padding-bottom: 20px !important;
-    justify-content: flex-start !important;
+    padding-top: 100px !important;
+    padding-bottom: 50px !important;
+    justify-content: center !important;
   }
 
   .hero-content {
-    padding: 0 10px !important;
+    padding: 0 14px !important;
     margin-top: 0 !important;
     text-align: center !important;
+  }
+
+  .scroll-indicator {
+    display: none !important;
   }
 
   .hero-title {
@@ -2158,11 +2162,12 @@ html, body {
   }
 
   .section-padding {
-    padding: 16px 14px !important;
+    padding: 48px 14px !important;
   }
 
   .halls-header {
-    margin-bottom: 12px !important;
+    margin-top: 10px !important;
+    margin-bottom: 24px !important;
   }
 
   .halls-subtitle {
@@ -2256,28 +2261,32 @@ html, body {
     display: none !important;
   }
 
+  /* Fit Hall Images perfectly to Frame in Mobile View */
   .hall-img-container,
   .hall-horizontal-container {
-    height: 230px !important;
-    max-height: 230px !important;
+    height: 220px !important;
+    min-height: 220px !important;
+    max-height: 220px !important;
     width: 100% !important;
-    border-radius: var(--radius-sm);
-    overflow: hidden;
-    position: relative;
-    margin-bottom: 4px;
+    border-radius: var(--radius-sm) !important;
+    overflow: hidden !important;
+    position: relative !important;
+    margin-bottom: 8px !important;
   }
 
   .hall-img, 
   .hall-horizontal-img {
     width: 100% !important;
     height: 100% !important;
-    max-height: 230px !important;
-    object-fit: cover;
-    position: relative !important;
+    min-height: 100% !important;
+    max-height: 100% !important;
+    object-fit: cover !important;
+    object-position: center !important;
+    position: absolute !important;
     left: 0 !important;
     top: 0 !important;
     transform: none !important;
-    border-radius: var(--radius-sm);
+    border-radius: var(--radius-sm) !important;
   }
 
   /* Center Text & Content Elements in Mobile View */
@@ -2327,15 +2336,19 @@ html, body {
     padding: 4px 10px;
   }
 
-  /* Compact 2-Card Display on Mobile View */
+  /* Clean Gap for All Event Categories & Recent Event Cards */
   .events-track {
-    gap: 12px !important;
+    gap: 16px !important;
     width: max-content !important;
   }
 
+  .recent-events-marquee-track {
+    gap: 16px !important;
+  }
+
   .event-card {
-    min-width: calc(50vw - 22px) !important;
-    width: calc(50vw - 22px) !important;
+    min-width: calc(50vw - 24px) !important;
+    width: calc(50vw - 24px) !important;
     max-width: 200px !important;
     height: 260px !important;
     scroll-snap-align: start !important;
@@ -2594,5 +2607,27 @@ html, body {
 
   .stats-label {
     font-size: 0.7rem;
+  }
+
+  /* Center & Scale Down Get Directions Button in Mobile View Only */
+  .get-directions-btn-wrapper {
+    display: flex !important;
+    justify-content: center !important;
+    text-align: center !important;
+    width: 100% !important;
+    margin-top: 16px !important;
+  }
+
+  .get-directions-btn {
+    padding: 9px 20px !important;
+    font-size: 0.72rem !important;
+    letter-spacing: 0.08em !important;
+    width: auto !important;
+    max-width: 200px !important;
+    display: inline-flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    margin: 0 auto !important;
+    border-radius: 20px !important;
   }
 }
