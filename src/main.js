@@ -16,7 +16,8 @@ document.addEventListener('DOMContentLoaded', () => {
       easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
       smoothWheel: true,
       wheelMultiplier: 1.0,
-      touchMultiplier: 1.5
+      touchMultiplier: 1.5,
+      smoothTouch: false
     });
 
     if (typeof ScrollTrigger !== 'undefined') {
@@ -51,7 +52,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     const particles = [];
-    const particleCount = 45;
+    const particleCount = window.innerWidth < 768 ? 16 : 40;
 
     class Particle {
       constructor() {
@@ -81,8 +82,10 @@ document.addEventListener('DOMContentLoaded', () => {
         ctx.beginPath();
         ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
         ctx.fillStyle = `rgba(212, 175, 55, ${this.opacity})`;
-        ctx.shadowBlur = 8;
-        ctx.shadowColor = 'rgba(212, 175, 55, 0.8)';
+        if (width > 768) {
+          ctx.shadowBlur = 6;
+          ctx.shadowColor = 'rgba(212, 175, 55, 0.8)';
+        }
         ctx.fill();
         ctx.restore();
       }
@@ -109,19 +112,18 @@ document.addEventListener('DOMContentLoaded', () => {
   function initGSAPAnimations() {
     if (typeof gsap === 'undefined' || typeof ScrollTrigger === 'undefined') return;
 
-    // Navigation Bar scroll state
+    // Navigation Bar scroll state with passive listener
     const navbar = document.querySelector('.navbar');
     if (navbar) {
-      ScrollTrigger.create({
-        start: 'top -50',
-        onUpdate: (self) => {
-          if (self.direction === 1 || window.scrollY > 80) {
-            navbar.classList.add('scrolled');
-          } else {
-            navbar.classList.remove('scrolled');
-          }
+      const handleNavbarScroll = () => {
+        if (window.scrollY > 40) {
+          navbar.classList.add('scrolled');
+        } else {
+          navbar.classList.remove('scrolled');
         }
-      });
+      };
+      window.addEventListener('scroll', handleNavbarScroll, { passive: true });
+      handleNavbarScroll();
     }
 
     // Hero Parallax & Zoom effect
@@ -141,8 +143,8 @@ document.addEventListener('DOMContentLoaded', () => {
       });
 
       gsap.to(heroContent, {
-        yPercent: -20,
-        opacity: 0.3,
+        yPercent: -15,
+        opacity: 0.6,
         ease: 'none',
         scrollTrigger: {
           trigger: '.hero-section',
@@ -275,10 +277,10 @@ document.addEventListener('DOMContentLoaded', () => {
     { src: 'Alhambra/hall8.jpg', title: 'Alhambra Luxury Seating Layout', category: 'alhambra', span: '' },
     { src: 'Alhambra/hall16.jpg', title: 'Alhambra Modern Interiors', category: 'alhambra', span: '' },
 
-    // Andalucia VIP Lounge
-    { src: 'Andalisia/vip1.jpg', title: 'Andalucia Executive Reception Lounge', category: 'andalucia', span: 'span-wide' },
-    { src: 'Andalisia/vip2.jpg', title: 'Andalucia VIP Suite Ambience', category: 'andalucia', span: '' },
-    { src: 'Andalisia/vip3.jpg', title: 'Andalucia Luxury Welcome Desk', category: 'andalucia', span: '' },
+    // Andalusia VIP Lounge
+    { src: 'Andalisia/vip1.jpg', title: 'Andalusia Executive Reception Lounge', category: 'andalucia', span: 'span-wide' },
+    { src: 'Andalisia/vip2.jpg', title: 'Andalusia VIP Suite Ambience', category: 'andalucia', span: '' },
+    { src: 'Andalisia/vip3.jpg', title: 'Andalusia Luxury Welcome Desk', category: 'andalucia', span: '' },
 
     // Cordoba & Granada Dining
     { src: 'Cordoba-Granada/dinning1.jpg', title: 'Cordoba & Granada Grand Dining Pavilion', category: 'cordoba', span: 'span-wide' },
@@ -446,7 +448,7 @@ document.addEventListener('DOMContentLoaded', () => {
       author: "Malik & Family — Grand Wedding Event"
     },
     {
-      quote: "Valencia Galleria sets a new standard for luxury event venues. The Andalucia VIP lounge and massive dining area catered seamlessly to 1,500+ guests.",
+      quote: "Valencia Galleria sets a new standard for luxury event venues. The Andalusia VIP lounge and massive dining area catered seamlessly to 1,500+ guests.",
       author: "Siddique Hassan — Corporate Summit Host"
     },
     {
@@ -632,6 +634,23 @@ document.addEventListener('DOMContentLoaded', () => {
           mobileNav.classList.remove('active');
         });
       });
+    }
+
+    const dateInput = document.getElementById('enquiry-date');
+    const datePlaceholder = document.getElementById('date-placeholder');
+    if (dateInput && datePlaceholder) {
+      const checkDateValue = () => {
+        if (dateInput.value) {
+          datePlaceholder.style.opacity = '0';
+        } else {
+          datePlaceholder.style.opacity = '1';
+        }
+      };
+      dateInput.addEventListener('change', checkDateValue);
+      dateInput.addEventListener('input', checkDateValue);
+      dateInput.addEventListener('focus', () => { datePlaceholder.style.opacity = '0'; });
+      dateInput.addEventListener('blur', checkDateValue);
+      checkDateValue();
     }
 
     if (enquiryForm) {
@@ -826,12 +845,25 @@ document.addEventListener('DOMContentLoaded', () => {
       ]
     },
     andalucia: {
-      title: "Andalucia Hall & VIP Executive Lounge",
+      title: "Andalusia Hall & VIP Executive Lounge",
       tag: "HALL 02 - PHOTO ALBUM",
       photos: [
         "Andalisia/vip1.jpg",
         "Andalisia/vip2.jpg",
         "Andalisia/vip3.jpg"
+      ]
+    },
+    rahulgandhi: {
+      title: "Shri Rahul Gandhi's Official Visit to Valencia Galleria",
+      tag: "VVIP DIGNITARY VISIT ALBUM",
+      photos: [
+        "rahull ghandhi/rahul ghandh stage.jpeg",
+        "rahull ghandhi/rahul ghandh stage 2.jpeg",
+        "rahull ghandhi/rahul ghandh walking.jpeg",
+        "rahull ghandhi/rahul ghandhi hall.jpeg",
+        "rahull ghandhi/rahul ghandh sign.jpeg",
+        "rahull ghandhi/rahul ghandh program.jpeg",
+        "rahull ghandhi/rahul ghandh invite.jpeg"
       ]
     }
   };
@@ -913,7 +945,7 @@ document.addEventListener('DOMContentLoaded', () => {
       renderModalPhoto();
     }
 
-    document.querySelectorAll('.recent-event-card, .event-card').forEach((card) => {
+    document.querySelectorAll('.recent-event-card, .event-card, .rahul-marquee-card, .vvip-photo-card').forEach((card) => {
       card.addEventListener('click', () => {
         const albumKey = card.getAttribute('data-album');
         if (albumKey) openAlbum(albumKey);
@@ -938,6 +970,13 @@ document.addEventListener('DOMContentLoaded', () => {
     if (openAndaluciaBtn) {
       openAndaluciaBtn.addEventListener('click', () => {
         openAlbum('andalucia');
+      });
+    }
+
+    const openRahulGandhiBtn = document.getElementById('open-rahulgandhi-gallery');
+    if (openRahulGandhiBtn) {
+      openRahulGandhiBtn.addEventListener('click', () => {
+        openAlbum('rahulgandhi');
       });
     }
 
@@ -1065,11 +1104,79 @@ document.addEventListener('DOMContentLoaded', () => {
     startAuto();
   }
 
+  function initAlhambraSlider() {
+    const slides = document.querySelectorAll('.alhambra-slide');
+    const prevBtn = document.getElementById('alhambra-prev');
+    const nextBtn = document.getElementById('alhambra-next');
+    if (!slides.length) return;
+
+    let currentSlide = 0;
+    let timer = null;
+
+    function goToSlide(idx) {
+      slides[currentSlide].classList.remove('active');
+      currentSlide = (idx + slides.length) % slides.length;
+      slides[currentSlide].classList.add('active');
+    }
+
+    function next() { goToSlide(currentSlide + 1); }
+    function prev() { goToSlide(currentSlide - 1); }
+
+    function startAuto() {
+      stopAuto();
+      timer = setInterval(next, 4000);
+    }
+
+    function stopAuto() {
+      if (timer) clearInterval(timer);
+    }
+
+    if (prevBtn) prevBtn.addEventListener('click', () => { prev(); startAuto(); });
+    if (nextBtn) nextBtn.addEventListener('click', () => { next(); startAuto(); });
+
+    startAuto();
+  }
+
+  function initAndaluciaSlider() {
+    const slides = document.querySelectorAll('.andalucia-slide');
+    const prevBtn = document.getElementById('andalucia-prev');
+    const nextBtn = document.getElementById('andalucia-next');
+    if (!slides.length) return;
+
+    let currentSlide = 0;
+    let timer = null;
+
+    function goToSlide(idx) {
+      slides[currentSlide].classList.remove('active');
+      currentSlide = (idx + slides.length) % slides.length;
+      slides[currentSlide].classList.add('active');
+    }
+
+    function next() { goToSlide(currentSlide + 1); }
+    function prev() { goToSlide(currentSlide - 1); }
+
+    function startAuto() {
+      stopAuto();
+      timer = setInterval(next, 4200);
+    }
+
+    function stopAuto() {
+      if (timer) clearInterval(timer);
+    }
+
+    if (prevBtn) prevBtn.addEventListener('click', () => { prev(); startAuto(); });
+    if (nextBtn) nextBtn.addEventListener('click', () => { next(); startAuto(); });
+
+    startAuto();
+  }
+
   // Run modules
   initGoldParticles();
   initGSAPAnimations();
   initGalleryAndLightbox();
   initFirstImpressionSlideshow();
+  initAlhambraSlider();
+  initAndaluciaSlider();
   initCordobaSlider();
   initEventsCarousel();
   initRecentEventsCarousel();
