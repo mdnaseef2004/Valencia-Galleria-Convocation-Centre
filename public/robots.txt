@@ -1,3 +1,3 @@
 User-agent: *
 Allow: /
-Sitemap: https://mdnaseef2004.github.io/Valencia-Galleria-Convocation-Centre/sitemap.xml
+Sitemap: https://www.valenciagalleria.com/sitemap.xml
