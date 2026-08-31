@@ -261,7 +261,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // --------------------------------------------------------------------------
   const galleryImages = [
     // Exterior
-    { src: 'Extertior/Valencia galleria Outfit.jpeg', title: 'Valencia Galleria Aerial Overview', category: 'exterior', span: 'span-wide' },
+    { src: 'Extertior/Valencia-galleria-Outfit.jpeg', title: 'Valencia Galleria Aerial Overview', category: 'exterior', span: 'span-wide' },
     { src: 'Extertior/introslide2.jpg', title: 'Grand Exterior Campus', category: 'exterior', span: '' },
     { src: 'Extertior/introslide3.jpg', title: 'Palatial Entrance Façade', category: 'exterior', span: 'span-tall' },
     { src: 'Extertior/introslide4.jpg', title: 'Illuminated Evening Grounds', category: 'exterior', span: '' },
@@ -300,8 +300,8 @@ document.addEventListener('DOMContentLoaded', () => {
     // Corporate & Conference Events
     { src: 'Build-X-Event/0T5A0852.JPG', title: 'Build X Corporate Summit', category: 'exterior', span: 'span-wide' },
     { src: 'Build-X-Event/0T5A0786.JPG', title: 'Executive Expo & Exhibition', category: 'exterior', span: '' },
-    { src: 'CONFERENCES/Faculty-Development-2026/0F1A1536.jpg', title: 'Faculty Development Program Conference 2026', category: 'educational', span: 'span-wide' },
-    { src: 'CONFERENCES/Faculty-Development-2026/0F1A1511.jpg', title: 'Faculty Conference Keynote Session', category: 'educational', span: '' }
+    { src: 'CONFERENCES/0F1A1536.jpg', title: 'Faculty Development Program Conference 2026', category: 'educational', span: 'span-wide' },
+    { src: 'CONFERENCES/0F1A1511.jpg', title: 'Faculty Conference Keynote Session', category: 'educational', span: '' }
   ];
 
   let currentImageIndex = 0;
@@ -737,7 +737,7 @@ document.addEventListener('DOMContentLoaded', () => {
       title: "Human Resources (HR) Training Program",
       tag: "CORPORATE CONFERENCE ALBUM",
       photos: [
-        "CONFERENCES/HR-Training/0T5A9627.jpg",
+        "CONFERENCES/0T5A9627.jpg",
         "CONFERENCES/HR-Training/0T5A9635.jpg",
         "CONFERENCES/HR-Training/0T5A9650.jpg",
         "CONFERENCES/HR-Training/0T5A9724.jpg",
@@ -768,7 +768,7 @@ document.addEventListener('DOMContentLoaded', () => {
       photos: [
         "Build-X-Event/0T5A0852.JPG",
         "Build-X-Event/0T5A0786.JPG",
-        "Build-X-Event/0T5A0792 (1).JPG",
+        "Build-X-Event/0T5A0792-1.JPG",
         "Build-X-Event/0T5A0797.JPG"
       ]
     },
@@ -793,8 +793,8 @@ document.addEventListener('DOMContentLoaded', () => {
       title: "Faculty Development Program 2026",
       tag: "CONFERENCE ALBUM",
       photos: [
-        "CONFERENCES/Faculty-Development-2026/0F1A1536.jpg",
-        "CONFERENCES/Faculty-Development-2026/0F1A1511.jpg",
+        "CONFERENCES/0F1A1536.jpg",
+        "CONFERENCES/0F1A1511.jpg",
         "CONFERENCES/Faculty-Development-2026/0F1A1556.jpg",
         "CONFERENCES/Faculty-Development-2026/0F1A1558.jpg"
       ]
@@ -857,13 +857,13 @@ document.addEventListener('DOMContentLoaded', () => {
       title: "Shri Rahul Gandhi's Official Visit to Valencia Galleria",
       tag: "VVIP DIGNITARY VISIT ALBUM",
       photos: [
-        "rahull ghandhi/rahul ghandh stage.jpeg",
-        "rahull ghandhi/rahul ghandh stage 2.jpeg",
-        "rahull ghandhi/rahul ghandh walking.jpeg",
-        "rahull ghandhi/rahul ghandhi hall.jpeg",
-        "rahull ghandhi/rahul ghandh sign.jpeg",
-        "rahull ghandhi/rahul ghandh program.jpeg",
-        "rahull ghandhi/rahul ghandh invite.jpeg"
+        "rahull-ghandhi/rahul-ghandh-stage.jpeg",
+        "rahull-ghandhi/rahul-ghandh-stage-2.jpeg",
+        "rahull-ghandhi/rahul-ghandh-walking.jpeg",
+        "rahull-ghandhi/rahul-ghandhi-hall.jpeg",
+        "rahull-ghandhi/rahul-ghandh-sign.jpeg",
+        "rahull-ghandhi/rahul-ghandh-program.jpeg",
+        "rahull-ghandhi/rahul-ghandh-invite.jpeg"
       ]
     }
   };
