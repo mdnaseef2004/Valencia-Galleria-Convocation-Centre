@@ -2100,15 +2100,15 @@ h1, h2, h3, h4, .font-serif {
 }
 
 .footer-director-passport-box {
-  width: 105px;
-  height: 135px;
-  border-radius: 8px;
+  width: 140px;
+  height: 180px;
+  border-radius: 10px;
   border: 2px solid var(--border-gold-bright);
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.6);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.7);
   overflow: hidden;
   margin-bottom: 14px;
   flex-shrink: 0;
-  background: #000;
+  background: #ffffff;
 }
 
 .footer-director-passport-box img {
@@ -2116,11 +2116,15 @@ h1, h2, h3, h4, .font-serif {
   height: 100%;
   object-fit: cover;
   object-position: top center;
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: crisp-edges;
+  backface-visibility: hidden;
+  transform: translateZ(0);
   transition: transform 0.5s ease;
 }
 
 .footer-director-card:hover .footer-director-passport-box img {
-  transform: scale(1.06);
+  transform: scale(1.06) translateZ(0);
 }
 
 .footer-director-info {
@@ -4171,9 +4175,9 @@ html, body {
   }
 
   .footer-director-passport-box {
-    width: 85px !important;
-    height: 110px !important;
-    border-radius: 6px !important;
+    width: 105px !important;
+    height: 135px !important;
+    border-radius: 8px !important;
     margin-bottom: 10px !important;
   }
 
