@@ -4284,4 +4284,27 @@ html, body {
   }
 }
 
+/* VVIP Spotlight Carousel Tabs */
+.vvip-tab-btn {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(212, 175, 55, 0.3);
+  color: var(--text-muted);
+  padding: 10px 24px;
+  border-radius: 30px;
+  font-family: var(--font-primary);
+  font-size: 0.88rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  outline: none;
+}
+
+.vvip-tab-btn:hover, .vvip-tab-btn.active {
+  background: linear-gradient(135deg, #d4af37 0%, #aa7c11 100%);
+  color: #000;
+  border-color: #d4af37;
+  box-shadow: 0 4px 16px rgba(212, 175, 55, 0.4);
+}
+
+
 

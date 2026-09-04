@@ -853,6 +853,16 @@ document.addEventListener('DOMContentLoaded', () => {
         "Andalisia/vip3.jpg?v=3"
       ]
     },
+        pinarayi: {
+      title: "Shri Pinarayi Vijayan - Civilis Launching & Year Declaration Program",
+      tag: "HONORABLE CHIEF MINISTER VISIT",
+      photos: [
+        "pinarayi-vijayan/pinarayi-vijayan-1.jpeg?v=5",
+        "pinarayi-vijayan/pinarayi-vijayan-2.jpeg?v=5",
+        "pinarayi-vijayan/pinarayi-vijayan-3.jpeg?v=5",
+        "pinarayi-vijayan/pinarayi-vijayan-4.jpeg?v=5"
+      ]
+    },
     rahulgandhi: {
       title: "Shri Rahul Gandhi's Official Visit to Valencia Galleria",
       tag: "VVIP DIGNITARY VISIT ALBUM",
