@@ -261,47 +261,47 @@ document.addEventListener('DOMContentLoaded', () => {
   // --------------------------------------------------------------------------
   const galleryImages = [
     // Exterior
-    { src: 'Extertior/Valencia-galleria-Outfit.jpeg?v=6', title: 'Valencia Galleria Aerial Overview', category: 'exterior', span: 'span-wide' },
-    { src: 'Extertior/introslide2.jpg?v=6', title: 'Grand Exterior Campus', category: 'exterior', span: '' },
-    { src: 'Extertior/introslide3.jpg?v=6', title: 'Palatial Entrance Façade', category: 'exterior', span: 'span-tall' },
-    { src: 'Extertior/introslide4.jpg?v=6', title: 'Illuminated Evening Grounds', category: 'exterior', span: '' },
-    { src: 'Extertior/introslide5.jpg?v=6', title: 'Architectural Details & Portico', category: 'exterior', span: '' },
-    { src: 'Extertior/introslide6.jpg?v=6', title: 'Spacious Promenade & Driveway', category: 'exterior', span: 'span-wide' },
+    { src: 'Extertior/Valencia-galleria-Outfit.jpeg?v=8', title: 'Valencia Galleria Aerial Overview', category: 'exterior', span: 'span-wide' },
+    { src: 'Extertior/introslide2.jpg?v=8', title: 'Grand Exterior Campus', category: 'exterior', span: '' },
+    { src: 'Extertior/introslide3.jpg?v=8', title: 'Palatial Entrance Façade', category: 'exterior', span: 'span-tall' },
+    { src: 'Extertior/introslide4.jpg?v=8', title: 'Illuminated Evening Grounds', category: 'exterior', span: '' },
+    { src: 'Extertior/introslide5.jpg?v=8', title: 'Architectural Details & Portico', category: 'exterior', span: '' },
+    { src: 'Extertior/introslide6.jpg?v=8', title: 'Spacious Promenade & Driveway', category: 'exterior', span: 'span-wide' },
 
     // Alhambra Hall
-    { src: 'Alhambra/hall11.jpg?v=6', title: 'Alhambra Grand Banquet Hall', category: 'alhambra', span: 'span-wide' },
-    { src: 'Alhambra/hall13.jpg?v=6', title: 'Alhambra Stage & Chandelier Lighting', category: 'alhambra', span: 'span-tall' },
-    { src: 'Alhambra/hall6.jpg?v=6', title: 'Alhambra Stage Backdrop Setup', category: 'alhambra', span: '' },
-    { src: 'Alhambra/hall3.jpg?v=6', title: 'Alhambra Intimate Guest Seating', category: 'alhambra', span: '' },
-    { src: 'Alhambra/hall5.jpg?v=6', title: 'Alhambra Interior Promenade', category: 'alhambra', span: '' },
-    { src: 'Alhambra/hall8.jpg?v=6', title: 'Alhambra Luxury Seating Layout', category: 'alhambra', span: '' },
-    { src: 'Alhambra/hall16.jpg?v=6', title: 'Alhambra Modern Interiors', category: 'alhambra', span: '' },
+    { src: 'Alhambra/hall11.jpg?v=8', title: 'Alhambra Grand Banquet Hall', category: 'alhambra', span: 'span-wide' },
+    { src: 'Alhambra/hall13.jpg?v=8', title: 'Alhambra Stage & Chandelier Lighting', category: 'alhambra', span: 'span-tall' },
+    { src: 'Alhambra/hall6.jpg?v=8', title: 'Alhambra Stage Backdrop Setup', category: 'alhambra', span: '' },
+    { src: 'Alhambra/hall3.jpg?v=8', title: 'Alhambra Intimate Guest Seating', category: 'alhambra', span: '' },
+    { src: 'Alhambra/hall5.jpg?v=8', title: 'Alhambra Interior Promenade', category: 'alhambra', span: '' },
+    { src: 'Alhambra/hall8.jpg?v=8', title: 'Alhambra Luxury Seating Layout', category: 'alhambra', span: '' },
+    { src: 'Alhambra/hall16.jpg?v=8', title: 'Alhambra Modern Interiors', category: 'alhambra', span: '' },
 
     // Andalusia VIP Lounge
-    { src: 'Andalisia/vip1.jpg?v=6', title: 'Andalusia Executive Reception Lounge', category: 'andalucia', span: 'span-wide' },
-    { src: 'Andalisia/vip2.jpg?v=6', title: 'Andalusia VIP Suite Ambience', category: 'andalucia', span: '' },
-    { src: 'Andalisia/vip3.jpg?v=6', title: 'Andalusia Luxury Welcome Desk', category: 'andalucia', span: '' },
+    { src: 'Andalisia/vip1.jpg?v=8', title: 'Andalusia Executive Reception Lounge', category: 'andalucia', span: 'span-wide' },
+    { src: 'Andalisia/vip2.jpg?v=8', title: 'Andalusia VIP Suite Ambience', category: 'andalucia', span: '' },
+    { src: 'Andalisia/vip3.jpg?v=8', title: 'Andalusia Luxury Welcome Desk', category: 'andalucia', span: '' },
 
     // Cordoba & Granada Dining
-    { src: 'Cordoba-Granada/dinning1.jpg?v=6', title: 'Cordoba & Granada Grand Dining Pavilion', category: 'cordoba', span: 'span-wide' },
-    { src: 'Cordoba-Granada/dinning14.jpg?v=6', title: 'Granada Luxury Dining Arrangement', category: 'cordoba', span: 'span-tall' },
-    { src: 'Cordoba-Granada/dinning15.jpg?v=6', title: 'Cordoba Banquet Tables & Linens', category: 'cordoba', span: '' },
-    { src: 'Cordoba-Granada/dinning16.jpg?v=6', title: 'Cordoba & Granada Full Hall Capacity', category: 'cordoba', span: 'span-wide' },
-    { src: 'Cordoba-Granada/dinning9.jpg?v=6', title: 'Curated Dining Table Setting', category: 'cordoba', span: '' },
-    { src: 'Cordoba-Granada/dinning11.jpg?v=6', title: 'Bespoke Feast Setup', category: 'cordoba', span: '' },
+    { src: 'Cordoba-Granada/dinning1.jpg?v=8', title: 'Cordoba & Granada Grand Dining Pavilion', category: 'cordoba', span: 'span-wide' },
+    { src: 'Cordoba-Granada/dinning14.jpg?v=8', title: 'Granada Luxury Dining Arrangement', category: 'cordoba', span: 'span-tall' },
+    { src: 'Cordoba-Granada/dinning15.jpg?v=8', title: 'Cordoba Banquet Tables & Linens', category: 'cordoba', span: '' },
+    { src: 'Cordoba-Granada/dinning16.jpg?v=8', title: 'Cordoba & Granada Full Hall Capacity', category: 'cordoba', span: 'span-wide' },
+    { src: 'Cordoba-Granada/dinning9.jpg?v=8', title: 'Curated Dining Table Setting', category: 'cordoba', span: '' },
+    { src: 'Cordoba-Granada/dinning11.jpg?v=8', title: 'Bespoke Feast Setup', category: 'cordoba', span: '' },
 
     // Educational Events & Convocations
-    { src: 'Raihan-Madrasa-Event/0F1A0437.jpg?v=6', title: 'Raihan Online Madrasa Convocation', category: 'educational', span: 'span-wide' },
-    { src: 'Raihan-Madrasa-Event/0F1A0394.jpg?v=6', title: 'Grand Educational Assembly', category: 'educational', span: 'span-tall' },
-    { src: 'Spark-Connect-Event/087A9373.jpg?v=6', title: 'Spark Connect Academic Conference', category: 'educational', span: 'span-wide' },
-    { src: 'Raihan-Madrasa-Event/duff.jpg?v=6', title: 'Raihan Online Madrasa Cultural Performance', category: 'educational', span: 'span-tall' },
-    { src: 'Spark-Connect-Event/087A9387.jpg?v=6', title: 'Academic Symposium & Address', category: 'educational', span: '' },
+    { src: 'Raihan-Madrasa-Event/0F1A0437.jpg?v=8', title: 'Raihan Online Madrasa Convocation', category: 'educational', span: 'span-wide' },
+    { src: 'Raihan-Madrasa-Event/0F1A0394.jpg?v=8', title: 'Grand Educational Assembly', category: 'educational', span: 'span-tall' },
+    { src: 'Spark-Connect-Event/087A9373.jpg?v=8', title: 'Spark Connect Academic Conference', category: 'educational', span: 'span-wide' },
+    { src: 'Raihan-Madrasa-Event/duff.jpg?v=8', title: 'Raihan Online Madrasa Cultural Performance', category: 'educational', span: 'span-tall' },
+    { src: 'Spark-Connect-Event/087A9387.jpg?v=8', title: 'Academic Symposium & Address', category: 'educational', span: '' },
 
     // Corporate & Conference Events
-    { src: 'Build-X-Event/0T5A0852.JPG?v=6', title: 'Build X Corporate Summit', category: 'exterior', span: 'span-wide' },
-    { src: 'Build-X-Event/0T5A0786.JPG?v=6', title: 'Executive Expo & Exhibition', category: 'exterior', span: '' },
-    { src: 'CONFERENCES/Faculty-Development-2026/0F1A1536.jpg?v=6', title: 'Faculty Development Program Conference 2026', category: 'educational', span: 'span-wide' },
-    { src: 'CONFERENCES/Faculty-Development-2026/0F1A1511.jpg?v=6', title: 'Faculty Conference Keynote Session', category: 'educational', span: '' }
+    { src: 'Build-X-Event/0T5A0852.JPG?v=8', title: 'Build X Corporate Summit', category: 'exterior', span: 'span-wide' },
+    { src: 'Build-X-Event/0T5A0786.JPG?v=8', title: 'Executive Expo & Exhibition', category: 'exterior', span: '' },
+    { src: 'CONFERENCES/Faculty-Development-2026/0F1A1536.jpg?v=8', title: 'Faculty Development Program Conference 2026', category: 'educational', span: 'span-wide' },
+    { src: 'CONFERENCES/Faculty-Development-2026/0F1A1511.jpg?v=8', title: 'Faculty Conference Keynote Session', category: 'educational', span: '' }
   ];
 
   let currentImageIndex = 0;
@@ -718,162 +718,162 @@ document.addEventListener('DOMContentLoaded', () => {
       title: "Ayadi Convocation Ceremony",
       tag: "CONVOCATION ALBUM",
       photos: [
-        "Ayadi-Convocation-Event/0F1A3112.jpg?v=6",
-        "Ayadi-Convocation-Event/0F1A3113.jpg?v=6",
-        "Ayadi-Convocation-Event/0F1A3125.jpg?v=6",
-        "Ayadi-Convocation-Event/0F1A3140.jpg?v=6",
-        "Ayadi-Convocation-Event/0F1A3205.jpg?v=6",
-        "Ayadi-Convocation-Event/0F1A3354.jpg?v=6",
-        "Ayadi-Convocation-Event/0F1A4204.jpg?v=6",
-        "Ayadi-Convocation-Event/0F1A4228.jpg?v=6",
-        "Ayadi-Convocation-Event/0F1A4254.jpg?v=6",
-        "Ayadi-Convocation-Event/0F1A4258.jpg?v=6",
-        "Ayadi-Convocation-Event/0F1A4277.jpg?v=6",
-        "Ayadi-Convocation-Event/0F1A4295.jpg?v=6",
-        "Ayadi-Convocation-Event/0F1A4329.jpg?v=6"
+        "Ayadi-Convocation-Event/0F1A3112.jpg?v=8",
+        "Ayadi-Convocation-Event/0F1A3113.jpg?v=8",
+        "Ayadi-Convocation-Event/0F1A3125.jpg?v=8",
+        "Ayadi-Convocation-Event/0F1A3140.jpg?v=8",
+        "Ayadi-Convocation-Event/0F1A3205.jpg?v=8",
+        "Ayadi-Convocation-Event/0F1A3354.jpg?v=8",
+        "Ayadi-Convocation-Event/0F1A4204.jpg?v=8",
+        "Ayadi-Convocation-Event/0F1A4228.jpg?v=8",
+        "Ayadi-Convocation-Event/0F1A4254.jpg?v=8",
+        "Ayadi-Convocation-Event/0F1A4258.jpg?v=8",
+        "Ayadi-Convocation-Event/0F1A4277.jpg?v=8",
+        "Ayadi-Convocation-Event/0F1A4295.jpg?v=8",
+        "Ayadi-Convocation-Event/0F1A4329.jpg?v=8"
       ]
     },
     hr: {
       title: "Human Resources (HR) Training Program",
       tag: "CORPORATE CONFERENCE ALBUM",
       photos: [
-        "CONFERENCES/HR-Training/0T5A9627.jpg?v=6",
-        "CONFERENCES/HR-Training/0T5A9635.jpg?v=6",
-        "CONFERENCES/HR-Training/0T5A9650.jpg?v=6",
-        "CONFERENCES/HR-Training/0T5A9724.jpg?v=6",
-        "CONFERENCES/HR-Training/0T5A9730.jpg?v=6",
-        "CONFERENCES/HR-Training/0T5A9802.jpg?v=6",
-        "CONFERENCES/HR-Training/0T5A9822.jpg?v=6",
-        "CONFERENCES/HR-Training/0T5A9844.jpg?v=6"
+        "CONFERENCES/HR-Training/0T5A9627.jpg?v=8",
+        "CONFERENCES/HR-Training/0T5A9635.jpg?v=8",
+        "CONFERENCES/HR-Training/0T5A9650.jpg?v=8",
+        "CONFERENCES/HR-Training/0T5A9724.jpg?v=8",
+        "CONFERENCES/HR-Training/0T5A9730.jpg?v=8",
+        "CONFERENCES/HR-Training/0T5A9802.jpg?v=8",
+        "CONFERENCES/HR-Training/0T5A9822.jpg?v=8",
+        "CONFERENCES/HR-Training/0T5A9844.jpg?v=8"
       ]
     },
     raihan: {
       title: "Raihan Online Madrasa Cultural Fest",
       tag: "CULTURAL ALBUM",
       photos: [
-        "Raihan-Madrasa-Event/duff.jpg?v=6",
-        "Raihan-Madrasa-Event/0F1A0394.jpg?v=6",
-        "Raihan-Madrasa-Event/0F1A0437.jpg?v=6",
-        "Raihan-Madrasa-Event/0F1A0479.jpg?v=6",
-        "Raihan-Madrasa-Event/0F1A0482.jpg?v=6",
-        "Raihan-Madrasa-Event/0F1A0517.jpg?v=6",
-        "Raihan-Madrasa-Event/0F1A0542.jpg?v=6",
-        "Raihan-Madrasa-Event/0F1A0545.jpg?v=6",
-        "Raihan-Madrasa-Event/0F1A0579.jpg?v=6"
+        "Raihan-Madrasa-Event/duff.jpg?v=8",
+        "Raihan-Madrasa-Event/0F1A0394.jpg?v=8",
+        "Raihan-Madrasa-Event/0F1A0437.jpg?v=8",
+        "Raihan-Madrasa-Event/0F1A0479.jpg?v=8",
+        "Raihan-Madrasa-Event/0F1A0482.jpg?v=8",
+        "Raihan-Madrasa-Event/0F1A0517.jpg?v=8",
+        "Raihan-Madrasa-Event/0F1A0542.jpg?v=8",
+        "Raihan-Madrasa-Event/0F1A0545.jpg?v=8",
+        "Raihan-Madrasa-Event/0F1A0579.jpg?v=8"
       ]
     },
     buildx: {
       title: "Build X Corporate Expo & Summit",
       tag: "CORPORATE ALBUM",
       photos: [
-        "Build-X-Event/0T5A0852.JPG?v=6",
-        "Build-X-Event/0T5A0786.JPG?v=6",
-        "Build-X-Event/0T5A0792-1.JPG?v=6",
-        "Build-X-Event/0T5A0797.JPG?v=6"
+        "Build-X-Event/0T5A0852.JPG?v=8",
+        "Build-X-Event/0T5A0786.JPG?v=8",
+        "Build-X-Event/0T5A0792-1.JPG?v=8",
+        "Build-X-Event/0T5A0797.JPG?v=8"
       ]
     },
     spark: {
       title: "Spark Connect Academic Summit",
       tag: "ACADEMIC ALBUM",
       photos: [
-        "Spark-Connect-Event/087A9373.jpg?v=6",
-        "Spark-Connect-Event/087A8464.jpg?v=6",
-        "Spark-Connect-Event/087A9381.jpg?v=6",
-        "Spark-Connect-Event/087A9387.jpg?v=6",
-        "Spark-Connect-Event/087A9390.jpg?v=6",
-        "Spark-Connect-Event/087A9395.jpg?v=6",
-        "Spark-Connect-Event/087A9398.jpg?v=6",
-        "Spark-Connect-Event/087A9400.jpg?v=6",
-        "Spark-Connect-Event/087A9405.jpg?v=6",
-        "Spark-Connect-Event/087A9411.jpg?v=6",
-        "Spark-Connect-Event/087A9413.jpg?v=6"
+        "Spark-Connect-Event/087A9373.jpg?v=8",
+        "Spark-Connect-Event/087A8464.jpg?v=8",
+        "Spark-Connect-Event/087A9381.jpg?v=8",
+        "Spark-Connect-Event/087A9387.jpg?v=8",
+        "Spark-Connect-Event/087A9390.jpg?v=8",
+        "Spark-Connect-Event/087A9395.jpg?v=8",
+        "Spark-Connect-Event/087A9398.jpg?v=8",
+        "Spark-Connect-Event/087A9400.jpg?v=8",
+        "Spark-Connect-Event/087A9405.jpg?v=8",
+        "Spark-Connect-Event/087A9411.jpg?v=8",
+        "Spark-Connect-Event/087A9413.jpg?v=8"
       ]
     },
     faculty: {
       title: "Faculty Development Program 2026",
       tag: "CONFERENCE ALBUM",
       photos: [
-        "CONFERENCES/Faculty-Development-2026/0F1A1536.jpg?v=6",
-        "CONFERENCES/Faculty-Development-2026/0F1A1511.jpg?v=6",
-        "CONFERENCES/Faculty-Development-2026/0F1A1556.jpg?v=6",
-        "CONFERENCES/Faculty-Development-2026/0F1A1558.jpg?v=6"
+        "CONFERENCES/Faculty-Development-2026/0F1A1536.jpg?v=8",
+        "CONFERENCES/Faculty-Development-2026/0F1A1511.jpg?v=8",
+        "CONFERENCES/Faculty-Development-2026/0F1A1556.jpg?v=8",
+        "CONFERENCES/Faculty-Development-2026/0F1A1558.jpg?v=8"
       ]
     },
     zeely: {
       title: "Zeely Convocation Ceremony",
       tag: "CONVOCATION ALBUM",
       photos: [
-        "Zeely-Convocation-Event/0F1A4022.jpg?v=6",
-        "Zeely-Convocation-Event/0F1A4159.jpg?v=6",
-        "Zeely-Convocation-Event/0F1A4181.jpg?v=6",
-        "Zeely-Convocation-Event/0F1A4236.jpg?v=6",
-        "Zeely-Convocation-Event/0F1A4250.jpg?v=6",
-        "Zeely-Convocation-Event/0F1A4401.jpg?v=6",
-        "Zeely-Convocation-Event/0F1A4436.jpg?v=6",
-        "Zeely-Convocation-Event/0F1A4447.jpg?v=6",
-        "Zeely-Convocation-Event/0F1A4484.jpg?v=6",
-        "Zeely-Convocation-Event/0F1A4496.jpg?v=6",
-        "Zeely-Convocation-Event/0F1A4703.jpg?v=6"
+        "Zeely-Convocation-Event/0F1A4022.jpg?v=8",
+        "Zeely-Convocation-Event/0F1A4159.jpg?v=8",
+        "Zeely-Convocation-Event/0F1A4181.jpg?v=8",
+        "Zeely-Convocation-Event/0F1A4236.jpg?v=8",
+        "Zeely-Convocation-Event/0F1A4250.jpg?v=8",
+        "Zeely-Convocation-Event/0F1A4401.jpg?v=8",
+        "Zeely-Convocation-Event/0F1A4436.jpg?v=8",
+        "Zeely-Convocation-Event/0F1A4447.jpg?v=8",
+        "Zeely-Convocation-Event/0F1A4484.jpg?v=8",
+        "Zeely-Convocation-Event/0F1A4496.jpg?v=8",
+        "Zeely-Convocation-Event/0F1A4703.jpg?v=8"
       ]
     },
     cordoba: {
       title: "Cordoba & Granada Ballroom & Dining Pavilion",
       tag: "HALL 03 - PHOTO ALBUM",
       photos: [
-        "Cordoba-Granada/dinning16.jpg?v=6",
-        "Cordoba-Granada/dinning1.jpg?v=6",
-        "Cordoba-Granada/dinning14.jpg?v=6",
-        "Cordoba-Granada/dinning15.jpg?v=6",
-        "Cordoba-Granada/dinning9.jpg?v=6",
-        "Cordoba-Granada/dinning11.jpg?v=6"
+        "Cordoba-Granada/dinning16.jpg?v=8",
+        "Cordoba-Granada/dinning1.jpg?v=8",
+        "Cordoba-Granada/dinning14.jpg?v=8",
+        "Cordoba-Granada/dinning15.jpg?v=8",
+        "Cordoba-Granada/dinning9.jpg?v=8",
+        "Cordoba-Granada/dinning11.jpg?v=8"
       ]
     },
     alhambra: {
       title: "Alhambra Hall - Intimate Event Venue",
       tag: "HALL 01 - PHOTO ALBUM",
       photos: [
-        "Alhambra/hall11.jpg?v=6",
-        "Alhambra/hall13.jpg?v=6",
-        "Alhambra/hall16.jpg?v=6",
-        "Alhambra/hall3.jpg?v=6",
-        "Alhambra/hall5.jpg?v=6",
-        "Alhambra/hall6.jpg?v=6",
-        "Alhambra/hall8.jpg?v=6",
-        "Alhambra/0F1A1722.JPG?v=6",
-        "Alhambra/0F1A1751.JPG?v=6",
-        "Alhambra/0F1A1753.JPG?v=6"
+        "Alhambra/hall11.jpg?v=8",
+        "Alhambra/hall13.jpg?v=8",
+        "Alhambra/hall16.jpg?v=8",
+        "Alhambra/hall3.jpg?v=8",
+        "Alhambra/hall5.jpg?v=8",
+        "Alhambra/hall6.jpg?v=8",
+        "Alhambra/hall8.jpg?v=8",
+        "Alhambra/0F1A1722.JPG?v=8",
+        "Alhambra/0F1A1751.JPG?v=8",
+        "Alhambra/0F1A1753.JPG?v=8"
       ]
     },
     andalucia: {
       title: "Andalusia Hall & VIP Executive Lounge",
       tag: "HALL 02 - PHOTO ALBUM",
       photos: [
-        "Andalisia/vip1.jpg?v=6",
-        "Andalisia/vip2.jpg?v=6",
-        "Andalisia/vip3.jpg?v=6"
+        "Andalisia/vip1.jpg?v=8",
+        "Andalisia/vip2.jpg?v=8",
+        "Andalisia/vip3.jpg?v=8"
       ]
     },
         pinarayi: {
       title: "Shri Pinarayi Vijayan - Civilis Launching & Year Declaration Program",
       tag: "HONORABLE CHIEF MINISTER VISIT",
       photos: [
-        "pinarayi-vijayan/pinarayi-vijayan-1.jpeg?v=6",
-        "pinarayi-vijayan/pinarayi-vijayan-2.jpeg?v=6",
-        "pinarayi-vijayan/pinarayi-vijayan-3.jpeg?v=6",
-        "pinarayi-vijayan/pinarayi-vijayan-4.jpeg?v=6"
+        "pinarayi-vijayan/pinarayi-vijayan-1.jpeg?v=8",
+        "pinarayi-vijayan/pinarayi-vijayan-2.jpeg?v=8",
+        "pinarayi-vijayan/pinarayi-vijayan-3.jpeg?v=8",
+        "pinarayi-vijayan/pinarayi-vijayan-4.jpeg?v=8"
       ]
     },
     rahulgandhi: {
       title: "Shri Rahul Gandhi's Official Visit to Valencia Galleria",
       tag: "VVIP DIGNITARY VISIT ALBUM",
       photos: [
-        "rahull-ghandhi/rahul-ghandh-stage.jpeg?v=6",
-        "rahull-ghandhi/rahul-ghandh-stage-2.jpeg?v=6",
-        "rahull-ghandhi/rahul-ghandh-walking.jpeg?v=6",
-        "rahull-ghandhi/rahul-ghandhi-hall.jpeg?v=6",
-        "rahull-ghandhi/rahul-ghandh-sign.jpeg?v=6",
-        "rahull-ghandhi/rahul-ghandh-program.jpeg?v=6",
-        "rahull-ghandhi/rahul-ghandh-invite.jpeg?v=6"
+        "rahull-ghandhi/rahul-ghandh-stage.jpeg?v=8",
+        "rahull-ghandhi/rahul-ghandh-stage-2.jpeg?v=8",
+        "rahull-ghandhi/rahul-ghandh-walking.jpeg?v=8",
+        "rahull-ghandhi/rahul-ghandhi-hall.jpeg?v=8",
+        "rahull-ghandhi/rahul-ghandh-sign.jpeg?v=8",
+        "rahull-ghandhi/rahul-ghandh-program.jpeg?v=8",
+        "rahull-ghandhi/rahul-ghandh-invite.jpeg?v=8"
       ]
     }
   };
@@ -980,6 +980,13 @@ document.addEventListener('DOMContentLoaded', () => {
     if (openAndaluciaBtn) {
       openAndaluciaBtn.addEventListener('click', () => {
         openAlbum('andalucia');
+      });
+    }
+
+        const openPinarayiBtn = document.getElementById('open-pinarayi-gallery');
+    if (openPinarayiBtn) {
+      openPinarayiBtn.addEventListener('click', () => {
+        openAlbum('pinarayi');
       });
     }
 
