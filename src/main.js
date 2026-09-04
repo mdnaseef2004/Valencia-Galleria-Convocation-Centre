@@ -855,7 +855,7 @@ document.addEventListener('DOMContentLoaded', () => {
     },
         pinarayi: {
       title: "Shri Pinarayi Vijayan - Civilis Launching & Year Declaration Program",
-      tag: "HONORABLE CHIEF MINISTER VISIT",
+      tag: "CIVILIS LAUNCHING & YEAR DECLARATION PROGRAM",
       photos: [
         "pinarayi-vijayan/pinarayi-vijayan-1.jpeg?v=10",
         "pinarayi-vijayan/pinarayi-vijayan-2.jpeg?v=10",
