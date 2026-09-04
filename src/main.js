@@ -1187,6 +1187,29 @@ document.addEventListener('DOMContentLoaded', () => {
     startAuto();
   }
 
+  // --------------------------------------------------------------------------
+  // ANALYTICS & EVENT TRACKING HELPER
+  // --------------------------------------------------------------------------
+  function trackEvent(eventName, eventParams = {}) {
+    if (typeof window.gtag === 'function') {
+      window.gtag('event', eventName, eventParams);
+    }
+  }
+
+  // Attach tracking to WhatsApp & Form
+  document.querySelectorAll('.floating-whatsapp-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      trackEvent('whatsapp_click', { event_category: 'Lead', event_label: 'WhatsApp Floating Button' });
+    });
+  });
+
+  const enquiryForm = document.getElementById('enquiry-form');
+  if (enquiryForm) {
+    enquiryForm.addEventListener('submit', () => {
+      trackEvent('generate_lead', { event_category: 'Form', event_label: 'Enquiry Form Submission' });
+    });
+  }
+
   // Run modules
   initGoldParticles();
   initGSAPAnimations();
