@@ -4306,5 +4306,24 @@ html, body {
   box-shadow: 0 4px 16px rgba(212, 175, 55, 0.4);
 }
 
+/* Prevent Mobile Double-Tap Zooming on Interactive Buttons & Controls */
+button,
+a,
+.slider-arrow,
+.slider-nav-pill,
+.btn-gold-primary,
+.btn-outline-luxury,
+.event-card,
+.recent-event-card,
+.vvip-photo-card,
+.lightbox-prev,
+.lightbox-next,
+.lightbox-close {
+  touch-action: manipulation !important;
+  -webkit-user-select: none !important;
+  user-select: none !important;
+  -webkit-tap-highlight-color: transparent !important;
+}
+
 
 
