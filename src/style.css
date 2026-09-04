@@ -3525,6 +3525,22 @@ html, body {
     margin-bottom: 18px !important;
   }
 
+  .vvip-hero-details .btn-gold-primary,
+  .vvip-hero-card .btn-gold-primary,
+  #open-pinarayi-gallery,
+  #open-rahulgandhi-gallery {
+    padding: 8px 18px !important;
+    font-size: 0.70rem !important;
+    letter-spacing: 0.08em !important;
+    border-radius: 20px !important;
+    width: auto !important;
+    display: inline-flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    max-width: 85% !important;
+    margin: 0 auto !important;
+  }
+
   /* Hide static 4-photo grid on mobile view — keep continuous marquee photo stream */
   .vvip-gallery-grid {
     display: none !important;
